@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#121212',
+                        mustard: '#dbd570',
+                        softPink: '#e6a5a7',
+                        wineRed: '#a63b5b',
+                        graphite: '#1f1f1f'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Norwester', 'Anton', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Anton&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Norwester';
+            src: url('https://fonts.cdnfonts.com/s/14865/Norwester.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #f3f3f3;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .grunge-concrete {
+            background-color: #0a0a0a;
+            background-image: 
+                radial-gradient(rgba(219, 213, 112, 0.05) 1px, transparent 0),
+                radial-gradient(rgba(166, 59, 91, 0.09) 2px, transparent 0);
+            background-size: 24px 24px, 48px 48px;
+            background-position: 0 0, 12px 12px;
+        }
+
+        .text-shadow-brutal {
+            text-shadow: 4px 4px 0px #a63b5b;
+        }
+
+        .border-grunge {
+            border: 2px solid #dbd570;
+            box-shadow: 6px 6px 0px #a63b5b;
+        }
+
+        .border-logo-box {
+            border: 2px dashed #e6a5a7;
+            background: rgba(18, 18, 18, 0.90);
+        }
+
+        .stamp-badge {
+            transform: rotate(-3deg);
+            transition: transform 0.2s ease;
+        }
+
+        .stamp-badge:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+    </style>
+</head>
+<body class="grunge-concrete min-h-screen flex flex-col justify-between selection:bg-mustard selection:text-black">
+
+    <header class="sticky top-0 z-50 bg-darkBg/95 backdrop-blur-md border-b border-graphite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="font-display text-3xl tracking-wider text-mustard">GOTÁN<span class="text-softPink">.</span></span>
+                <span class="hidden sm:inline-block text-xs uppercase tracking-widest text-zinc-400 border-l border-zinc-700 pl-3">Festival de Tango 2026</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-semibold">
+                <a href="#manifiesto" class="hover:text-mustard transition-colors">Manifiesto</a>
+                <a href="#lineup" class="hover:text-mustard transition-colors">Lineup</a>
+                <a href="#sedes" class="hover:text-mustard transition-colors">Sedes</a>
+                <a href="#alianzas" class="hover:text-mustard transition-colors">Aliados & Sponsors</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <a href="https://www.instagram.com/gotanfestival/" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-1 text-xs font-bold uppercase tracking-wider text-softPink hover:text-mustard transition-colors px-3 py-2 border border-softPink/30 bg-cardBg">
+                    <span>IG</span>
+                    <span>@gotanfestival</span>
+                </a>
+                <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="bg-mustard text-black font-extrabold px-5 py-2.5 uppercase tracking-wider text-xs sm:text-sm hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b] hover:translate-x-0.5 hover:translate-y-0.5">
+                    Entradas 🎟️
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-wineRed/15 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="inline-block mb-6 px-4 py-1.5 bg-graphite border border-softPink/40 text-softPink text-xs sm:text-sm uppercase tracking-widest stamp-badge">
+                Primera Edición Mendoza • Próxima Edición Santiago de Chile ⚡️
+            </div>
+            
+            <!-- OFFICIAL LOGO PLACEMENT AREA -->
+            <div class="my-8 max-w-lg mx-auto p-8 border-logo-box rounded-none shadow-2xl relative group">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-wineRed text-white text-[10px] uppercase px-3 py-0.5 tracking-widest font-mono">
+                    Espacio Oficial de Logotipo
+                </div>
+                <h1 class="font-display text-6xl sm:text-8xl tracking-wider text-mustard uppercase pt-2 text-shadow-brutal">
+                    GOTÁN
+                </h1>
+                <p class="text-xs sm:text-sm text-softPink uppercase tracking-widest mt-3 font-semibold">
+                    Festival Internacional de Tango de Altura
+                </p>
+            </div>
+            
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-300 font-light mb-10">
+                El sonido urbano pisa fuerte conectando la escena cuyana con Chile y Buenos Aires. Rompiendo la inercia del género.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm font-bold uppercase tracking-wider">
+                <div class="px-6 py-3 bg-cardBg border border-zinc-800 text-white shadow-[3px_3px_0px_#1f1f1f]">
+                    📍 18, 19 y 20 de Septiembre 2026
+                </div>
+                <div class="px-6 py-3 bg-cardBg border border-zinc-800 text-white shadow-[3px_3px_0px_#1f1f1f]">
+                    🏛️ Rivadavia • Ciudad • Cultura
+                </div>
+            </div>
+        </section>
+
+        <section id="manifiesto" class="py-20 bg-cardBg border-y border-graphite relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div class="inline-block mb-4 px-3 py-1 bg-wineRed text-white text-xs uppercase tracking-widest font-mono">
+                    EL MANIFIESTO ⚡
+                </div>
+                <h2 class="font-display text-4xl sm:text-6xl uppercase tracking-wide text-mustard mb-8 leading-tight">
+                    OLVÍDATE DE TODO LO QUE TE CONTARON <span class="text-wineRed">SOBRE EL TANGO.</span>
+                </h2>
+                
+                <div class="space-y-6 text-zinc-300 text-base sm:text-lg font-light leading-relaxed max-w-3xl mx-auto">
+                    <p class="font-semibold text-white">
+                        Algo se está gestando entre Santiago de Chile y Mendoza. Un nuevo pulso, una toma de aire fresco que viene a romper la inercia.
+                    </p>
+                    <p>
+                        No es lo de siempre. Es la crudeza de la calle cruzándose con la altura.
+                    </p>
+                    <p class="text-softPink font-medium">
+                        GOTÁN nace para trascender los formatos tradicionales y conectar con las nuevas audiencias a través de una propuesta contemporánea y potente.
+                    </p>
+                </div>
+
+                <div class="mt-12 p-6 bg-darkBg border border-mustard/30 inline-block text-left max-w-xl mx-auto shadow-xl">
+                    <div class="text-xs uppercase font-bold text-mustard tracking-widest mb-1">Proyección Internacional</div>
+                    <p class="text-xs sm:text-sm text-zinc-400">
+                        Esta primera edición marca el inicio del puente cultural en Mendoza (septiembre 2026), proyectando oficialmente nuestra <strong>segunda edición en Santiago de Chile</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lineup" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Lineup & Artistas</h2>
+                <p class="text-softPink uppercase tracking-widest text-sm">3 Días • 3 Espacios • Detalle exclusivo de cada ensamble</p>
+            </div>
+
+            <!-- Lineup Grid with Detailed Recuadros for Every Single Band -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Vara Dorada (Headliner) -->
+                <div class="md:col-span-2 lg:col-span-3 p-8 sm:p-10 bg-gradient-to-r from-zinc-900 via-graphite to-zinc-900 border-grunge relative overflow-hidden group">
+                    <div class="absolute top-3 right-4 flex items-center gap-3">
+                        <a href="https://www.instagram.com/varadorada_tango/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard uppercase font-mono underline">@varadorada_tango 📸</a>
+                        <span class="text-wineRed font-mono text-xs uppercase tracking-widest bg-darkBg px-3 py-1 border border-wineRed/40">Headliner Internacional</span>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-softPink block mb-1">Desde Chile 🇨🇱 • Cierran las tres noches del festival</span>
+                    <h3 class="font-display text-4xl sm:text-6xl text-mustard uppercase tracking-widest mb-3">VARA DORADA</h3>
+                    <p class="text-zinc-300 max-w-3xl text-sm sm:text-base leading-relaxed">
+                        Ensamble de tango concebido como un viaje sonoro a través de la rica historia y evolución del género. Bajo la dirección musical y arreglos de Tito Cerda, en esta visita el ensamble se presenta en formato integrado por Pancho Miranda (voz), Catalina Torres (violín), Jimena Rey (contrabajo) y Camilo Orellana (piano). Interpretan desde la crudeza del tango clásico e inmortal de la Época de Oro hasta composiciones de autoría propia y un homenaje especial a Astor Piazzolla.
+                    </p>
+                </div>
+
+                <!-- 2. Orquesta Escuela del 1800 -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta Escuela</span>
+                            <a href="https://www.instagram.com/ladel1800.ok/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">@ladel1800.ok 📸</a>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Orquesta Escuela del 1800</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Escuela de tango para músicos, profesionales y estudiantes fundada en 2023 en Mendoza. Su repertorio abarca el tango clásico de las grandes orquestas con profundo respeto, así como tango moderno, incluyendo piezas del siglo XXI, de autoría femenina y de la región cuyana bajo la dirección de Gonzalo Lesta Saraví.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Este (Día 1)</div>
+                </div>
+
+                <!-- 3. Al Tango -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Ensamble</span>
+                            <span class="text-xs text-zinc-500">Mendoza</span>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Al Tango</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Una orquesta de tango que respira tradición y se anima al presente. Con la fuerza del bandoneón, la profundidad del contrabajo, la elegancia del piano y el duelo de dos voces que se encuentran y se desafían (Evelyn Vela y Raúl Gurí Vera), interpretan clásicos con arreglos propios de su director, proponiendo un tango vivo, de abrazo y de noche mendocina con alma de arrabal.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Este (Día 1)</div>
+                </div>
+
+                <!-- 4. La Cooperativa Bajo Club -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Ensamble de Bajos</span>
+                            <a href="https://www.instagram.com/cooperativabajoclub/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">@cooperativabajoclub 📸</a>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">La Cooperativa Bajo Club</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Ensamble mendocino de bajos eléctricos conformado como cuarteto por Julián Lucero, Emmanuel Rodríguez, Hernán Cremaschi y Federico Alma. Explora las posibilidades técnicas y sonoras del instrumento mediante obras de autoría propia que buscan originalidad e identidad desafiando respetuosamente las raíces del género.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Ciudad (Día 2)</div>
+                </div>
+
+                <!-- 5. Broche de Oro -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Sexteto Binacional</span>
+                            <span class="text-xs text-zinc-500">Mendoza / Chile</span>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Broche de Oro</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Agrupación binacional integrada por Ofelia Cuadra y Pancho Miranda en voz, Felo Barbosa en contrabajo, Leandro Riolobo en guitarra, Gonzalo Lesta en violín y Mariano Burgos en bandoneón. Recupera la esencia de las grandes orquestas tangueras combinando obras fundamentales del género con arreglos propios y una mirada desde la escena musical cuyana y latinoamericana.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Ciudad (Día 2)</div>
+                </div>
+
+                <!-- 6. Sexteto del 1800 -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Sexteto Tanguero</span>
+                            <a href="https://www.instagram.com/sexteto1800/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">@sexteto1800 📸</a>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Sexteto del 1800</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Agrupación mendocina nacida en 2025 que interpreta los estilos orquestales del tango tradicional (Di Sarli, D'Arienzo, Pugliese, entre otros) y prepara su repertorio de tango nuevo federal del Siglo XXI con composiciones propias de la región cuyana. Integrado por Marcos Longobardi, Carolina Cusa, Juan Cruz Zuloaga, Luciana Glogowski, Catalina López y Gonzalo Lesta.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Cultura (Día 3)</div>
+                </div>
+
+                <!-- 7. La Mundial Orkestra -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta Típica</span>
+                            <a href="https://www.instagram.com/lamundial_orkestra/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">@lamundial_orkestra 📸</a>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">La Mundial Orkestra</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Gran orquesta típica con comitiva completa e invitados de primer nivel para coronar las jornadas del festival con una propuesta sinfónica y popular que reúne la potencia de los arreglos contemporáneos y la tradición bailable.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Cultura (Día 3)</div>
+                </div>
+
+                <!-- 8. Tangorra -->
+                <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Trío Electrónico</span>
+                            <div class="flex items-center gap-2">
+                                <a href="https://www.instagram.com/tangorraorquesta/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">@tangorraorquesta 📸</a>
+                                <span class="text-xs text-zinc-500">Buenos Aires 🇦🇷</span>
+                            </div>
+                        </div>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Tangorra</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Banda porteña integrada por Cecilia Giles (violín y voz), Mikele Borra (bandoneón) y Fran Borra (bajo, programaciones y voz). Con 16 años de trayectoria y tras girar por Europa y el Festival de Tango de Buenos Aires, presentan su quinto álbum "En Trance", combinando bases y grooves de techno con instrumentos acústicos y melodías hipnóticas.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente Exclusivo Día 3 (Cultura)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sedes" class="py-16 bg-cardBg border-y border-graphite">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Sedes del Festival</h2>
+                    <p class="text-zinc-400">Agendá las 3 jornadas imperdibles y consultá las ubicaciones exactas</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Day 1 -->
+                    <div class="bg-darkBg p-6 border-t-4 border-mustard flex flex-col justify-between shadow-xl">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-softPink tracking-widest block mb-1">Día 1 • Viernes 18 Sep</span>
+                            <h3 class="font-display text-3xl text-white uppercase mb-1 tracking-wide">Rivadavia</h3>
+                            <p class="text-xs text-mustard mb-3 flex items-center space-x-1">
+                                <span>📍</span>
+                                <a href="https://maps.google.com/?cid=14826299724409201682" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors">Teatro Municipal Luis Encio Bianchi (Lavalle, Rivadavia)</a>
+                            </p>
+                            <p class="text-sm text-zinc-400 mb-6">Apertura oficial en Zona Este.</p>
+                            <ul class="space-y-3 text-sm text-zinc-300 border-t border-graphite pt-4">
+                                <li>⚡️ Orquesta Escuela del 1800</li>
+                                <li>⚡️ Al Tango</li>
+                                <li>⚡️ <strong>Vara Dorada 🇨🇱</strong></li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-graphite flex flex-col gap-3">
+                            <div class="text-xs text-zinc-500 uppercase">Sede Este (Día 1)</div>
+                            <a href="https://www.entradaweb.com.ar/evento/43c855f0/step/1" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-graphite hover:bg-mustard hover:text-black text-mustard border border-mustard/40 font-bold py-2 uppercase text-xs tracking-wider transition-all">
+                                Comprar Ticket Día 1 🎟️
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="bg-darkBg p-6 border-t-4 border-softPink flex flex-col justify-between shadow-xl">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-softPink tracking-widest block mb-1">Día 2 • Sábado 19 Sep</span>
+                            <h3 class="font-display text-3xl text-white uppercase mb-1 tracking-wide">Ciudad</h3>
+                            <p class="text-xs text-softPink mb-3 flex items-center space-x-1">
+                                <span>📍</span>
+                                <a href="https://maps.google.com/?q=La+Cantina+del+Juglar+Av.+Hipólito+Yrigoyen+295+Ciudad+de+Mendoza" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors">La Cantina del Juglar (Av. Hipólito Yrigoyen 295, Ciudad de Mendoza)</a>
+                            </p>
+                            <p class="text-sm text-zinc-400 mb-6">Encuentro tanguero en espacio cultural icónico.</p>
+                            <ul class="space-y-3 text-sm text-zinc-300 border-t border-graphite pt-4">
+                                <li>⚡️ La Cooperativa Bajo Club</li>
+                                <li>⚡️ Broche de Oro</li>
+                                <li>⚡️ <strong>Vara Dorada 🇨🇱</strong></li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-graphite flex flex-col gap-3">
+                            <div class="text-xs text-zinc-500 uppercase">Sede Ciudad (Día 2)</div>
+                            <a href="https://www.entradaweb.com.ar/evento/6dadab2d/step/1" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-graphite hover:bg-softPink hover:text-black text-softPink border border-softPink/40 font-bold py-2 uppercase text-xs tracking-wider transition-all">
+                                Comprar Ticket Día 2 🎟️
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="bg-darkBg p-6 border-t-4 border-wineRed flex flex-col justify-between shadow-xl">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-softPink tracking-widest block mb-1">Día 3 • Domingo 20 Sep</span>
+                            <h3 class="font-display text-3xl text-white uppercase mb-1 tracking-wide">Cultura</h3>
+                            <p class="text-xs text-wineRed mb-3 flex items-center space-x-1">
+                                <span>📍</span>
+                                <a href="https://maps.google.com/?cid=5937969139937596827" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors">Sala Elina Alba / Secretaría de Cultura (Gutiérrez 204)</a>
+                            </p>
+                            <p class="text-sm text-zinc-400 mb-6">Gran cierre institucional en la Secretaría de Cultura.</p>
+                            <ul class="space-y-3 text-sm text-zinc-300 border-t border-graphite pt-4">
+                                <li>⚡️ Sexteto del 1800</li>
+                                <li>⚡️ La Mundial Orkestra</li>
+                                <li>⚡️ Tangorra 🇦🇷</li>
+                                <li>⚡️ <strong>Vara Dorada 🇨🇱</strong></li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-graphite flex flex-col gap-3">
+                            <div class="text-xs text-zinc-500 uppercase">Gran Cierre (Día 3)</div>
+                            <a href="https://www.entradaweb.com.ar/evento/6cdba68d/step/1" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-graphite hover:bg-wineRed hover:text-white text-white border border-wineRed/60 font-bold py-2 uppercase text-xs tracking-wider transition-all">
+                                Comprar Ticket Día 3 🎟️
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="alianzas" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl sm:text-5xl text-white uppercase mb-4 tracking-wide">Aliados & Sponsors</h2>
+            <p class="text-zinc-400 max-w-xl mx-auto mb-8 text-sm">Instituciones y marcas que acompañan esta primera edición de GOTÁN.</p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-zinc-300 font-semibold uppercase tracking-wider text-xs sm:text-sm mb-12">
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800 rounded">Sanix</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800 rounded">Elixir</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800 rounded">Sin Fin</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800 rounded">Desayunos Mendoza</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800 rounded">La Crosta Pizza</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800 rounded">Mora Hostel</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800/80 rounded border-dashed text-zinc-400">La del 1800</span>
+                <span class="px-4 py-2.5 bg-cardBg border border-zinc-800/80 rounded border-dashed text-zinc-400">Felo Barbosa Producciones</span>
+            </div>
+
+            <!-- Call to Action for Future Sponsors -->
+            <div class="max-w-2xl mx-auto p-8 bg-cardBg border border-mustard/40 shadow-xl">
+                <h3 class="font-display text-2xl text-mustard uppercase mb-3">¿Querés sumar tu marca o espacio?</h3>
+                <p class="text-sm text-zinc-300 mb-6">Invitamos a marcas, bodegas y empresas a ser parte de nuestra red de sponsors y aliados estratégicos para la edición 2026.</p>
+                <a href="mailto:gotanfestival@gmail.com" class="inline-block bg-softPink text-black font-extrabold px-6 py-3 uppercase tracking-widest text-xs hover:bg-mustard transition-all shadow-[3px_3px_0px_#a63b5b]">
+                    Sumate como Sponsor 🤝
+                </a>
+            </div>
+        </section>
+
+        <section id="tickets" class="py-24 max-w-4xl mx-auto px-4 text-center">
+            <div class="p-8 sm:p-12 bg-gradient-to-br from-graphite to-darkBg border-grunge shadow-2xl">
+                <h2 class="font-display text-4xl sm:text-6xl text-mustard uppercase mb-4 tracking-wide">Conseguí tus entradas</h2>
+                <p class="text-zinc-300 mb-8 max-w-lg mx-auto text-sm sm:text-base">
+                    No te pierdas la primera edición de GOTÁN. Anticipadas disponibles en EntradaWeb. Cupos limitados por función.
+                </p>
+                <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-black font-extrabold px-8 py-4 uppercase tracking-widest text-base hover:bg-softPink transition-all shadow-[4px_4px_0px_#a63b5b] hover:translate-x-0.5 hover:translate-y-0.5">
+                    Comprar Tickets en EntradaWeb 🎟️
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-darkBg border-t border-graphite py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="font-display text-2xl text-mustard tracking-wide">GOTÁN</span>
+            <p class="text-xs text-zinc-500 mt-1">Festival Internacional de Tango de Altura • Mendoza 2026</p>
+            <div class="mt-2 text-xs text-zinc-400 font-mono uppercase tracking-widest">
+                Organiza: Felo Barbosa Producciones & La del 1800
+            </div>
+            <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs">
+                <a href="mailto:gotanfestival@gmail.com" class="text-softPink hover:text-mustard transition-colors font-mono">
+                    📧 gotanfestival@gmail.com
+                </a>
+                <span class="text-zinc-700 hidden sm:inline">•</span>
+                <span class="text-softPink uppercase tracking-widest font-semibold">
+                    📸 Instagram: @gotanfestival
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
