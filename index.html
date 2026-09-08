@@ -58,11 +58,6 @@
             border: 2px solid #dbd570;
             box-shadow: 6px 6px 0px #a63b5b;
         }
-
-        .border-logo-box {
-            border: 2px dashed #e6a5a7;
-            background: rgba(18, 18, 18, 0.90);
-        }
     </style>
 </head>
 <body class="grunge-concrete min-h-screen flex flex-col justify-between selection:bg-mustard selection:text-black">
@@ -99,15 +94,12 @@
                 Primera Edición Mendoza • Próxima Edición Santiago de Chile ⚡️
             </div>
             
-            <!-- LOGO GRANDE EN PORTADA LIMPIO -->
-            <div class="my-8 max-w-xl mx-auto p-6 sm:p-10 border-logo-box rounded-none shadow-2xl relative group flex flex-col items-center justify-center">
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-wineRed text-white text-[10px] uppercase px-3 py-0.5 tracking-widest font-mono">
-                    Edición 2026
-                </div>
-                <img src="logo.png" alt="GOTÁN 2026" class="max-h-56 sm:max-h-72 w-auto object-contain my-2">
+            <!-- LOGO GRANDE EN PORTADA (SIN CAJA PUNTEADA, BIEN VISIBLE) -->
+            <div class="my-8 max-w-3xl mx-auto px-4 flex flex-col items-center justify-center">
+                <img src="logo.png" alt="GOTÁN 2026" class="w-full max-w-2xl h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
             </div>
             
-            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-300 font-light mb-10">
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-300 font-light mb-10 mt-6">
                 El sonido urbano pisa fuerte conectando la escena cuyana con Chile y Buenos Aires. Rompiendo la inercia del género.
             </p>
 
@@ -396,11 +388,11 @@
         </section>
     </main>
 
-    <footer class="bg-darkBg border-t border-graphite py-10">
+    <footer class="bg-darkBg border-t border-graphite py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center gap-4">
-            <!-- LOGO EN FOOTER LIMPIO -->
-            <img src="logo.png" alt="GOTÁN 2026" class="h-16 w-auto object-contain mb-2">
-            <p class="text-xs text-zinc-500">Festival Internacional de Tango de Altura • Mendoza 2026</p>
+            <!-- LOGO GRANDE EN FOOTER -->
+            <img src="logo.png" alt="GOTÁN 2026" class="h-20 w-auto object-contain mb-2">
+            <p class="text-xs text-zinc-500 tracking-widest uppercase">Festival Internacional de Tango de Altura • Mendoza 2026</p>
             <div class="mt-2 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs">
                 <a href="mailto:gotanfestival@gmail.com" class="text-softPink hover:text-mustard transition-colors font-mono">
                     📧 gotanfestival@gmail.com
