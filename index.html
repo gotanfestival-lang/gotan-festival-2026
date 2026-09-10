@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page brutalista completa. Incluye Header interactivo, Hero, Manifiesto, Lineup completo de artistas, Cronograma y venta por sedes en EntradaWeb, y la sección de Alianzas en 3 niveles estrictos (ORGANIZA, ALIADOS INSTITUCIONALES, AUSPICIAN en un único grid continuo de 9 marcas sin subetiquetas de filas). -->
-    <!-- Visualization & Content Choices: Imágenes con object-contain para logos y marcas para evitar recortes, y object-cover optimizado para artistas. Todos los enlaces a Instagrams verificados con precisión. -->
+    <!-- Application Structure Plan: Landing page brutalista completa. Incluye Header interactivo, Hero, Manifiesto intacto original, Lineup con fotos adaptadas sin recorte (object-contain), Cronograma y venta por sedes en EntradaWeb, y la sección de Alianzas en 3 niveles estrictos (ORGANIZA, ALIADOS INSTITUCIONALES, AUSPICIAN en 2 filas visuales de 3 y 6 logos sin subetiquetas escritas). -->
+    <!-- Visualization & Content Choices: Imágenes con object-contain para logos, marcas y fotos de artistas para evitar recortes. Todos los enlaces a Instagrams verificados con precisión. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -130,7 +130,7 @@
             </div>
         </section>
 
-        <!-- MANIFIESTO -->
+        <!-- MANIFIESTO (TEXTO ORIGINAL INTACTO) -->
         <section id="manifiesto" class="py-20 bg-cardBg border-y border-graphite relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <div class="inline-block mb-4 px-3 py-1 bg-wineRed text-white text-xs uppercase tracking-widest font-mono">
@@ -151,7 +151,7 @@
             </div>
         </section>
 
-        <!-- LINEUP & ARTISTAS -->
+        <!-- LINEUP & ARTISTAS (FOTOS ADAPTADAS SIN RECORTE) -->
         <section id="lineup" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="text-xs font-mono uppercase tracking-widest text-softPink block mb-2">Programación Oficial</span>
@@ -179,8 +179,8 @@
                                 Ensamble de tango de primer nivel que ofrece un espectáculo sumamente elegante y sofisticado, concebido como un viaje sonoro a través de la rica historia y evolución del género. Bajo la dirección musical y arreglos de Tito Cerda, el ensamble reúne a músicos virtuosos como Pancho Miranda (voz), Catalina Torres (violín), Jimena Rey (contrabajo) y Camilo Orellana (piano). Su repertorio abarca desde la crudeza del tango clásico hasta composiciones de autoría propia y un Homenaje a Ástor Piazzolla.
                             </p>
                         </div>
-                        <div class="w-full h-64 sm:h-72 bg-cardBg border border-zinc-800 overflow-hidden relative group-hover:border-mustard/60 transition-all flex items-center justify-center">
-                            <img src="varadorada.jpg.jpeg" alt="Vara Dorada Tango" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/1f1f1f/dbd570?text=VARA+DORADA';">
+                        <div class="w-full h-64 sm:h-80 bg-cardBg border border-zinc-800 overflow-hidden relative group-hover:border-mustard/60 transition-all flex items-center justify-center p-2">
+                            <img src="varadorada.jpg.jpeg" alt="Vara Dorada Tango" class="w-full h-full object-contain object-center transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400/1f1f1f/dbd570?text=VARA+DORADA';">
                         </div>
                     </div>
                 </div>
@@ -188,8 +188,8 @@
                 <!-- Artist 2: Orquesta Escuela La del 1800 -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="ladel1800_banda.jpg.jpg" alt="Orquesta Escuela de Tango La del 1800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/e6a5a7?text=La+del+1800';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="ladel1800_banda.jpg.jpg" alt="Orquesta Escuela de Tango La del 1800" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/e6a5a7?text=La+del+1800';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta Escuela</span>
@@ -204,8 +204,8 @@
                 <!-- Artist 3: Al Tango -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="altango.jpg.jpg" alt="Al Tango" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/dbd570?text=Al+Tango';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="altango.jpg.jpg" alt="Al Tango" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/dbd570?text=Al+Tango';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta</span>
@@ -220,8 +220,8 @@
                 <!-- Artist 4: Cooperativa Bajo Club -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="cooperativabajoclub.jpg.jpeg" alt="Cooperativa Bajo Club" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/a63b5b?text=Bajo+Club';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="cooperativabajoclub.jpg.jpeg" alt="Cooperativa Bajo Club" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/a63b5b?text=Bajo+Club';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Ensamble</span>
@@ -236,8 +236,8 @@
                 <!-- Artist 5: Broche de Oro -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="brochedeoro.jpg.jpg" alt="Broche de Oro Sexteto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/dbd570?text=Broche+de+Oro';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="brochedeoro.jpg.jpg" alt="Broche de Oro Sexteto" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/dbd570?text=Broche+de+Oro';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Sexteto Binacional</span>
@@ -252,8 +252,8 @@
                 <!-- Artist 6: Sexteto 1800 -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="sexteto1800.jpg.jpg" alt="Sexteto 1800" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/e6a5a7?text=Sexteto+1800';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="sexteto1800.jpg.jpg" alt="Sexteto 1800" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/e6a5a7?text=Sexteto+1800';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Tradicional</span>
@@ -268,8 +268,8 @@
                 <!-- Artist 7: La Mundial Orkestra -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="lamundial.jpg.jpeg" alt="La Mundial Orkestra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/a63b5b?text=La+Mundial';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="lamundial.jpg.jpeg" alt="La Mundial Orkestra" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/a63b5b?text=La+Mundial';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta Típica</span>
@@ -284,8 +284,8 @@
                 <!-- Artist 8: Tangorra -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center">
-                            <img src="tangorra.jpg.jpg" alt="Tangorra Orquesta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/dbd570?text=Tangorra';">
+                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="tangorra.jpg.jpg" alt="Tangorra Orquesta" class="w-full h-full object-contain transition-transform duration-500" onerror="this.onerror=null; this.src='https://via.placeholder.com/500x350/121212/dbd570?text=Tangorra';">
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Trío Electrónico</span>
@@ -416,14 +416,15 @@
                 </div>
             </div>
 
-            <!-- 3. AUSPICIAN (LISTA SECUENCIAL CONTINUA) -->
+            <!-- 3. AUSPICIAN (EN 2 FILAS VISUALES INDEPENDIENTES SIN ETIQUETAS ESCRITAS) -->
             <div>
                 <div class="text-center mb-10">
                     <h3 class="font-display text-3xl sm:text-5xl text-mustard uppercase tracking-wider mb-2">AUSPICIAN</h3>
                     <div class="w-16 h-1 bg-wineRed mx-auto"></div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- FILA 1 DE AUSPICIAN (3 LOGOS) -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mb-6">
                     <!-- 1. Mora Hostel -->
                     <a href="https://www.instagram.com/morahostel" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
                         <img src="morahostel.jpg.jpeg" alt="Mora Hostel" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Mora+Hostel';">
@@ -441,41 +442,44 @@
                         <img src="sanix.jpg.jpeg" alt="Sanix Saneamientos" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Sanix';">
                         <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@sanix.saneamientos</span>
                     </a>
+                </div>
 
+                <!-- FILA 2 DE AUSPICIAN (6 LOGOS) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
                     <!-- 4. La Primavera -->
-                    <a href="https://www.instagram.com/pizzeriaprimavera1/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                        <img src="primavera.jpg.jpeg" alt="Pizzería Primavera" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Primavera';">
-                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@pizzeriaprimavera1</span>
+                    <a href="https://www.instagram.com/pizzeriaprimavera1/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="primavera.jpg.jpeg" alt="Pizzería Primavera" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Primavera';">
+                        <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink text-center">@pizzeriaprimavera1</span>
                     </a>
 
                     <!-- 5. La Crosta Pizzería -->
-                    <a href="https://www.instagram.com/lacrosta_pizzeria_/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                        <img src="lacrosta.jpg.jpeg" alt="La Crosta Pizzería" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=La+Crosta';">
-                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@lacrosta_pizzeria_</span>
+                    <a href="https://www.instagram.com/lacrosta_pizzeria_/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="lacrosta.jpg.jpeg" alt="La Crosta Pizzería" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=La+Crosta';">
+                        <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink text-center">@lacrosta_pizzeria_</span>
                     </a>
 
                     <!-- 6. Biri Biri -->
-                    <a href="https://www.instagram.com/biribiri.cantina/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                        <img src="biribiri.jpg.jpeg" alt="Biri Biri Cantina" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Biri+Biri';">
-                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@biribiri.cantina</span>
+                    <a href="https://www.instagram.com/biribiri.cantina/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="biribiri.jpg.jpeg" alt="Biri Biri Cantina" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Biri+Biri';">
+                        <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink text-center">@biribiri.cantina</span>
                     </a>
 
                     <!-- 7. Desayunos Mendoza -->
-                    <a href="https://www.instagram.com/desayunos.mendoza/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                        <img src="desayunosmendoza.jpg.jpeg" alt="Desayunos Mendoza" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Desayunos';">
-                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@desayunos.mendoza</span>
+                    <a href="https://www.instagram.com/desayunos.mendoza/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="desayunosmendoza.jpg.jpeg" alt="Desayunos Mendoza" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Desayunos';">
+                        <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink text-center">@desayunos.mendoza</span>
                     </a>
 
                     <!-- 8. Cantina Juglar -->
-                    <a href="https://www.instagram.com/cantinajuglar/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                        <img src="cantinajuglar.jpg.jpeg" alt="Cantina Juglar" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Cantina+Juglar';">
-                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@cantinajuglar</span>
+                    <a href="https://www.instagram.com/cantinajuglar/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="cantinajuglar.jpg.jpeg" alt="Cantina Juglar" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Cantina+Juglar';">
+                        <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink text-center">@cantinajuglar</span>
                     </a>
 
                     <!-- 9. Elixir Vinoteca -->
-                    <a href="https://www.instagram.com/elixirvinoteca/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                        <img src="elixir.jpg.jpeg" alt="Elixir Vinoteca" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Elixir';">
-                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@elixirvinoteca</span>
+                    <a href="https://www.instagram.com/elixirvinoteca/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="elixir.jpg.jpeg" alt="Elixir Vinoteca" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Elixir';">
+                        <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink text-center">@elixirvinoteca</span>
                     </a>
                 </div>
             </div>
