@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page brutalista completa. Incluye Header interactivo, Hero, Manifiesto, Lineup completo de artistas, Cronograma y venta por sedes en EntradaWeb, y la sección de Alianzas en 3 niveles (Organiza, Aliados Institucionales, Auspician en 2 filas) con todos los links verificados a Instagram. -->
-    <!-- Visualization & Content Choices: Imágenes con object-contain para logos y marcas para evitar recortes, y object-cover optimizado para artistas. -->
+    <!-- Application Structure Plan: Landing page brutalista completa. Incluye Header interactivo, Hero, Manifiesto, Lineup completo de artistas, Cronograma y venta por sedes en EntradaWeb, y la sección de Alianzas en 3 niveles estrictos (ORGANIZA, ALIADOS INSTITUCIONALES, AUSPICIAN en un único grid continuo de 9 marcas sin subetiquetas de filas). -->
+    <!-- Visualization & Content Choices: Imágenes con object-contain para logos y marcas para evitar recortes, y object-cover optimizado para artistas. Todos los enlaces a Instagrams verificados con precisión. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -416,77 +416,67 @@
                 </div>
             </div>
 
-            <!-- 3. AUSPICIAN -->
+            <!-- 3. AUSPICIAN (LISTA SECUENCIAL CONTINUA) -->
             <div>
                 <div class="text-center mb-10">
                     <h3 class="font-display text-3xl sm:text-5xl text-mustard uppercase tracking-wider mb-2">AUSPICIAN</h3>
                     <div class="w-16 h-1 bg-wineRed mx-auto"></div>
                 </div>
 
-                <!-- PRIMERA FILA (3 LOGOS: Mora Hostel, Hostel Sin Fin, Sanix) -->
-                <div class="mb-6">
-                    <div class="text-center text-xs font-mono text-zinc-500 uppercase tracking-widest mb-3">Alojamiento & Servicios Oficiales</div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                        <!-- Mora Hostel -->
-                        <a href="https://www.instagram.com/morahostel" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                            <img src="morahostel.jpg.jpeg" alt="Mora Hostel" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Mora+Hostel';">
-                            <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@morahostel</span>
-                        </a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <!-- 1. Mora Hostel -->
+                    <a href="https://www.instagram.com/morahostel" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="morahostel.jpg.jpeg" alt="Mora Hostel" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Mora+Hostel';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@morahostel</span>
+                    </a>
 
-                        <!-- Hostel Sin Fin -->
-                        <a href="https://www.instagram.com/hostelsinfin/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                            <img src="hostelsinfin.jpg.jpeg" alt="Hostel Sin Fin" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Hostel+Sin+Fin';">
-                            <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@hostelsinfin</span>
-                        </a>
+                    <!-- 2. Hostel Sin Fin -->
+                    <a href="https://www.instagram.com/hostelsinfin/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="hostelsinfin.jpg.jpeg" alt="Hostel Sin Fin" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Hostel+Sin+Fin';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@hostelsinfin</span>
+                    </a>
 
-                        <!-- Sanix -->
-                        <a href="https://www.instagram.com/sanix.saneamientos/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
-                            <img src="sanix.jpg.jpeg" alt="Sanix Saneamientos" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Sanix';">
-                            <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@sanix.saneamientos</span>
-                        </a>
-                    </div>
-                </div>
+                    <!-- 3. Sanix -->
+                    <a href="https://www.instagram.com/sanix.saneamientos/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="sanix.jpg.jpeg" alt="Sanix Saneamientos" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Sanix';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@sanix.saneamientos</span>
+                    </a>
 
-                <!-- SEGUNDA FILA (6 LOGOS: La Primavera, La Crosta Pizzería, Biri Biri, Desayunos Mendoza, Cantina Juglar, Elixir) -->
-                <div>
-                    <div class="text-center text-xs font-mono text-zinc-500 uppercase tracking-widest mb-3">Gastronomía & Marcas Colaboradoras</div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
-                        <!-- La Primavera -->
-                        <a href="https://www.instagram.com/pizzeriaprimavera1/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[130px] group transition-all">
-                            <img src="primavera.jpg.jpeg" alt="Pizzería Primavera" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50/1f1f1f/dbd570?text=Primavera';">
-                            <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink">@pizzeriaprimavera1</span>
-                        </a>
+                    <!-- 4. La Primavera -->
+                    <a href="https://www.instagram.com/pizzeriaprimavera1/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="primavera.jpg.jpeg" alt="Pizzería Primavera" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Primavera';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@pizzeriaprimavera1</span>
+                    </a>
 
-                        <!-- La Crosta Pizzería -->
-                        <a href="https://www.instagram.com/lacrosta_pizzeria_/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[130px] group transition-all">
-                            <img src="lacrosta.jpg.jpeg" alt="La Crosta Pizzería" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50/1f1f1f/dbd570?text=La+Crosta';">
-                            <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink">@lacrosta_pizzeria_</span>
-                        </a>
+                    <!-- 5. La Crosta Pizzería -->
+                    <a href="https://www.instagram.com/lacrosta_pizzeria_/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="lacrosta.jpg.jpeg" alt="La Crosta Pizzería" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=La+Crosta';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@lacrosta_pizzeria_</span>
+                    </a>
 
-                        <!-- Biri Biri -->
-                        <a href="https://www.instagram.com/biribiri.cantina/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[130px] group transition-all">
-                            <img src="biribiri.jpg.jpeg" alt="Biri Biri Cantina" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50/1f1f1f/dbd570?text=Biri+Biri';">
-                            <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink">@biribiri.cantina</span>
-                        </a>
+                    <!-- 6. Biri Biri -->
+                    <a href="https://www.instagram.com/biribiri.cantina/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="biribiri.jpg.jpeg" alt="Biri Biri Cantina" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Biri+Biri';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@biribiri.cantina</span>
+                    </a>
 
-                        <!-- Desayunos Mendoza -->
-                        <a href="https://www.instagram.com/desayunos.mendoza/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[130px] group transition-all">
-                            <img src="desayunosmendoza.jpg.jpeg" alt="Desayunos Mendoza" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50/1f1f1f/dbd570?text=Desayunos';">
-                            <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink">@desayunos.mendoza</span>
-                        </a>
+                    <!-- 7. Desayunos Mendoza -->
+                    <a href="https://www.instagram.com/desayunos.mendoza/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="desayunosmendoza.jpg.jpeg" alt="Desayunos Mendoza" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Desayunos';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@desayunos.mendoza</span>
+                    </a>
 
-                        <!-- Cantina Juglar -->
-                        <a href="https://www.instagram.com/cantinajuglar/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[130px] group transition-all">
-                            <img src="cantinajuglar.jpg.jpeg" alt="Cantina Juglar" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50/1f1f1f/dbd570?text=Cantina+Juglar';">
-                            <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink">@cantinajuglar</span>
-                        </a>
+                    <!-- 8. Cantina Juglar -->
+                    <a href="https://www.instagram.com/cantinajuglar/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="cantinajuglar.jpg.jpeg" alt="Cantina Juglar" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Cantina+Juglar';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@cantinajuglar</span>
+                    </a>
 
-                        <!-- Elixir Vinoteca -->
-                        <a href="https://www.instagram.com/elixirvinoteca/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-4 flex flex-col items-center justify-center min-h-[130px] group transition-all">
-                            <img src="elixir.jpg.jpeg" alt="Elixir Vinoteca" class="max-h-14 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/150x50/1f1f1f/dbd570?text=Elixir';">
-                            <span class="text-[10px] font-mono text-zinc-400 group-hover:text-softPink">@elixirvinoteca</span>
-                        </a>
-                    </div>
+                    <!-- 9. Elixir Vinoteca -->
+                    <a href="https://www.instagram.com/elixirvinoteca/" target="_blank" rel="noopener noreferrer" class="bg-cardBg border-card p-5 flex flex-col items-center justify-center min-h-[140px] group transition-all">
+                        <img src="elixir.jpg.jpeg" alt="Elixir Vinoteca" class="max-h-16 w-auto object-contain mb-2 filter grayscale group-hover:grayscale-0 transition-all" onerror="this.onerror=null; this.src='https://via.placeholder.com/180x60/1f1f1f/dbd570?text=Elixir';">
+                        <span class="text-[11px] font-mono text-zinc-400 group-hover:text-softPink">@elixirvinoteca</span>
+                    </a>
                 </div>
             </div>
 
@@ -497,4 +487,23 @@
     <footer class="bg-darkBg border-t border-graphite py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center space-x-3">
-                <img src="logo.png" alt="GOTÁN 2026" class="h-10 w-auto object
+                <img src="logo.png" alt="GOTÁN 2026" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
+                <span class="text-xs uppercase tracking-widest text-zinc-400">GOTÁN 2026 • Festival Internacional de Tango de Altura</span>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-zinc-400">
+                <a href="https://www.instagram.com/gotanfestival/" target="_blank" rel="noopener noreferrer" class="hover:text-mustard transition-colors">
+                    Instagram: @gotanfestival
+                </a>
+                <span>•</span>
+                <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="hover:text-mustard transition-colors">
+                    Venta en EntradaWeb
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-zinc-900 text-center text-xs text-zinc-600">
+            © 2026 GOTÁN Festival. Todos los derechos reservados. Mendoza, Argentina.
+        </div>
+    </footer>
+
+</body>
+</html>
