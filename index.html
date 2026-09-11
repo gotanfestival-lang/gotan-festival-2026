@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup destacado con Vara Dorada (Chile) y Tangorra (Buenos Aires) en formato horizontal ancho como headliners principales y 6 agrupaciones en grilla responsiva, Sección de Sedes optimizada con enlaces directos a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes con efecto Grayscale en reposo, y Sección Banner CTA de Sponsoreo conectada a WhatsApp y correo. -->
+    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup destacado con Vara Dorada (Chile) y Tangorra (Buenos Aires) en formato horizontal ancho como headliners principales y 6 agrupaciones en grilla responsiva, Sección de Sedes optimizada con enlaces directos a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes con efecto Grayscale en reposo y enlace oficial a Instagram de Muni Rivadavia, y Sección Banner CTA de Sponsoreo conectada a WhatsApp y correo. -->
     <!-- Visualization & Content Choices: Diseño Dark Brutalist en HTML semántico con Tailwind CSS. Cero gráficos SVG. Cero Mermaid.js. Manejador JS centralizado de imágenes que garantiza la búsqueda exhaustiva de extensiones y muestra un fallback visual responsivo únicamente en caso de no hallar el archivo físico. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -211,7 +211,6 @@
         <section id="lineup" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Lineup & Artistas</h2>
-                <p class="text-softPink uppercase tracking-widest text-sm">Cada artista con su respectiva fotografía oficial integrada</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -233,8 +232,8 @@
                             </p>
                         </div>
                         <div class="w-full h-64 sm:h-72 bg-darkBg border border-zinc-800 overflow-hidden relative flex items-center justify-center p-2">
-                            <img src="varadorada.jpg" alt="Vara Dorada" class="max-w-full max-h-full object-contain object-center transition-all duration-300" 
-                                 onerror="handleImgFallback(this, 'varadorada.jpg', ['varadorada.jpg.jpg', 'varadorada.jpeg', 'varadorada.png', 'varadorada.JPG', 'varadorada.PNG', 'varadorada.webp'])">
+                            <img src="varadorada.jpg.jpg" alt="Vara Dorada" class="max-w-full max-h-full object-contain object-center transition-all duration-300" 
+                                 onerror="handleImgFallback(this, 'varadorada.jpg.jpg', ['varadorada.jpg', 'varadorada.jpg.jpeg', 'varadorada.jpeg', 'varadorada.png', 'varadorada.JPG', 'varadorada.PNG', 'varadorada.webp'])">
                             <div class="hidden flex-col items-center justify-center text-center p-4">
                                 <span class="font-display text-2xl text-mustard uppercase">VARA DORADA</span>
                                 <span class="text-xs text-zinc-400 mt-2 font-mono">Ensamble Internacional 🇨🇱</span>
@@ -408,7 +407,6 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">3 Días • 3 Sedes</h2>
-                    <p class="text-softPink uppercase tracking-widest text-sm">Hacé clic en cada botón para adquirir tu ticket por función en EntradaWeb</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -491,12 +489,11 @@
         <section id="alianzas" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Aliados, Sponsors & Organización</h2>
-                <p class="text-softPink uppercase tracking-widest text-sm">Instituciones, marcas y productoras que impulsan GOTÁN 2026. Hacé clic en cada marca para visitar sus canales oficiales.</p>
             </div>
 
             <div class="space-y-16">
                 <div>
-                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3">Organiza y Produce</h3>
+                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3 text-center">ORGANIZAN</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <a href="https://www.instagram.com/felo.barbosa/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
                             <img src="felobarbosa.png" alt="Felo Barbosa Producciones" class="max-h-20 w-auto object-contain mb-3"
@@ -531,7 +528,7 @@
                 </div>
 
                 <div>
-                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3">Aliados Institucionales</h3>
+                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3 text-center">Aliados Institucionales</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <a href="https://www.instagram.com/cultura.mendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
                             <img src="mendoza.png" alt="Gobierno de Mendoza - Subsecretaría de Cultura" class="max-h-20 w-auto object-contain mb-3"
@@ -543,20 +540,20 @@
                             <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @cultura.mendoza ↗</span>
                         </a>
 
-                        <a href="https://www.facebook.com/RivadaviaMendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
+                        <a href="https://www.instagram.com/muni.rivadaviamendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
                             <img src="rivadavia.png" alt="Municipalidad de Rivadavia" class="max-h-20 w-auto object-contain mb-3"
                                  onerror="handleImgFallback(this, 'rivadavia.png', ['rivadavia.png.png', 'rivadavia.jpeg', 'rivadavia.webp'])">
                             <div class="hidden flex-col items-center">
                                 <span class="font-display text-xl text-white group-hover:text-mustard uppercase">Muni Rivadavia</span>
                                 <span class="text-xs text-zinc-400 font-mono mt-1">Municipalidad de Rivadavia</span>
                             </div>
-                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">Facebook Rivadavia Mendoza ↗</span>
+                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @muni.rivadaviamendoza ↗</span>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3">Auspician</h3>
+                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3 text-center">Auspician</h3>
                     <div class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <a href="https://www.instagram.com/morahostel" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[140px]">
