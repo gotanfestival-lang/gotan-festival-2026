@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup completo de 8 artistas con fotografías encuadradas sin recortes y fallback automático multi-extensión (.jpg, .jpg.jpg, .jpeg, .png) para Vara Dorada y Tangorra, Sección de Sedes con enlaces a mapas de Google y venta individual de tickets en EntradaWeb, y Grilla completa de Organizadores (Felo Barbosa, La del 1800, La Cooperativa), Aliados Institucionales (Gobierno de Mendoza, Municipalidad de Rivadavia) y Auspiciantes (Mora Hostel, Sin Fin, Sanix, Primavera, La Crosta, Biribiri, Desayunos Mendoza, Cantina Juglar, Elixir) con tarjetas de logos integrados, enlaces directos a Instagrams oficiales y badges interactivos. -->
+    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup completo de 8 artistas con fotografías encuadradas sin recortes y fallback automático multi-extensión (.jpg, .jpg.jpg, .jpeg, .png) para Vara Dorada y Tangorra, Sección de Sedes con enlaces a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes, y la nueva Sección Banner CTA de Sponsoreo en rojo vino con botón destacado hacia mailto:gotanfestival@gmail.com. -->
     <!-- Visualization & Content Choices: Diseño Dark Brutalist en HTML semántico con Tailwind CSS. Cero gráficos SVG. Cero Mermaid.js. Manejadores de imágenes resilientes que garantizan tarjetas atractivas aun cuando falta el archivo físico de logo. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -706,6 +706,23 @@
                             </div>
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER CTA SPONSOR -->
+        <section class="bg-wineRed py-16 sm:py-20 px-4 sm:px-6 lg:px-8 text-center border-y border-graphite">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-display text-4xl sm:text-6xl text-white uppercase tracking-wider mb-4 leading-tight">
+                    SÉ PARTE DE LA HISTORIA
+                </h2>
+                <p class="max-w-2xl mx-auto text-base sm:text-lg text-white/90 font-light mb-8 leading-relaxed">
+                    Sumá tu marca o empresa a la primera edición de GOTÁN. Escribinos para recibir nuestra propuesta de sponsoreo y alianzas comerciales.
+                </p>
+                <div>
+                    <a href="mailto:gotanfestival@gmail.com" class="inline-block bg-mustard text-black font-extrabold px-8 py-4 uppercase tracking-wider text-sm sm:text-base border border-black shadow-[5px_5px_0px_#0a0a0a] hover:bg-white hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
+                        QUIERO SER SPONSOR ✉️
+                    </a>
                 </div>
             </div>
         </section>
