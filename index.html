@@ -37,8 +37,8 @@
 
     <link rel="icon" id="gotan-favicon" type="image/png" href="logo.png">
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page profesional interactiva para GOTÁN 2026. Incluye Header sticky con accesos a redes, Hero impactante con Manifiesto cultural, Lineup interactivo (Vara Dorada y Tangorra como Headliners horizontales), Sedes completas con mapas directos y venta de entradas por fecha en EntradaWeb, Sponsoreo y Auspiciantes organizados y centrados, y Acciones Flotantes Rápidas (Back to Top y acceso directo de Tickets). -->
-    <!-- Visualization & Content Choices: Diseño Dark Brutalist puro con HTML5, Tailwind CSS y Vanilla JavaScript. Sin librerías pesadas ni SVG. Iconografía tipográfica/Unicode, fallback automático de imágenes resiliente y generador dinámico de favicon mediante Canvas. -->
+    <!-- Application Structure Plan: Landing page profesional para GOTÁN 2026. Incluye Header sticky, Hero con manifiesto, Lineup interactivo, Sedes con mapas directos y compra por fecha en EntradaWeb, Aliados centrados y Botón Flotante de Volver al Top. -->
+    <!-- Visualization & Content Choices: Estilo Dark Brutalist con HTML5, Tailwind CSS y Vanilla JavaScript. Sin SVG ni librerías pesadas. Iconografía tipográfica/Unicode, fallback de imágenes resiliente y generador dinámico de favicon. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -542,14 +542,10 @@
     </footer>
 
     <!-- Acciones Flotantes Rápidas -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-        <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba" class="bg-graphite/90 text-mustard border border-mustard/60 hover:bg-mustard hover:text-darkBg p-3 font-mono text-xs font-bold transition-all opacity-0 pointer-events-none transition-opacity duration-300 shadow-lg">
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba" class="bg-graphite/90 text-mustard border border-mustard/60 hover:bg-mustard hover:text-darkBg py-3 px-4 font-mono text-xs font-bold transition-all opacity-0 pointer-events-none transition-opacity duration-300 shadow-lg flex items-center gap-1">
             ▲ TOP
         </button>
-
-        <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="bg-mustard text-darkBg font-mono text-xs font-bold uppercase py-3 px-4 border-2 border-wineRed shadow-[4px_4px_0px_#a63b5b] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all flex items-center gap-2">
-            🎟️ COMPRAR TICKETS
-        </a>
     </div>
 
     <script>
