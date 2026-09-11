@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup completo de 8 artistas con fotografías encuadradas sin recortes y fallback automático multi-extensión (.jpg, .jpg.jpg, .jpeg, .png) para Vara Dorada y Tangorra, Sección de Sedes con enlaces a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes, y la nueva Sección Banner CTA de Sponsoreo en rojo vino con botón destacado hacia mailto:gotanfestival@gmail.com. -->
-    <!-- Visualization & Content Choices: Diseño Dark Brutalist en HTML semántico con Tailwind CSS. Cero gráficos SVG. Cero Mermaid.js. Manejadores de imágenes resilientes que garantizan tarjetas atractivas aun cuando falta el archivo físico de logo. -->
+    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup completo de 8 artistas con fotografías encuadradas sin recortes y fallback automático multi-extensión (.jpg, .jpg.jpg, .jpeg, .png), Sección de Sedes con enlaces a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes, y Sección Banner CTA de Sponsoreo conectada directamente a WhatsApp con mensaje predeterminado y opción secundaria por email. -->
+    <!-- Visualization & Content Choices: Diseño Dark Brutalist en HTML semántico con Tailwind CSS. Cero gráficos SVG. Cero Mermaid.js. Manejadores de imágenes resilientes que garantizan tarjetas atractivas aun cuando falta el archivo físico de logo o foto. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -127,109 +127,106 @@
             </div>
             
             <div class="my-4 max-w-md mx-auto flex flex-col items-center justify-center">
-                <img src="logo.png" alt="GOTÁN 2026" class="w-full h-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]" 
+                <img src="logo.png" alt="GOTÁN Logo" class="w-full max-w-xs sm:max-w-sm h-auto object-contain mx-auto" 
                 onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='logo.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                <h1 class="hidden font-display text-6xl sm:text-8xl tracking-wider text-mustard uppercase pt-2 text-shadow-brutal">
+                <h1 class="hidden font-display text-6xl sm:text-8xl lg:text-9xl text-mustard uppercase tracking-widest leading-none text-shadow-brutal">
                     GOTÁN
                 </h1>
             </div>
-            
-            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-300 font-light mb-10 mt-6">
-                El sonido urbano pisa fuerte conectando la escena cuyana con Chile y Buenos Aires. Rompiendo la inercia del género.
+
+            <p class="font-display text-xl sm:text-3xl text-white uppercase tracking-wider mb-8 max-w-3xl mx-auto">
+                Festival Internacional de Tango de Altura
             </p>
 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm font-bold uppercase tracking-wider">
-                <div class="px-6 py-3 bg-cardBg border border-zinc-800 text-white shadow-[3px_3px_0px_#1f1f1f]">
-                    📍 18, 19 y 20 de Septiembre 2026
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs sm:text-sm font-mono uppercase tracking-widest text-zinc-300 mb-10">
+                <div class="bg-cardBg px-4 py-2 border border-zinc-800 flex items-center gap-2">
+                    <span class="text-mustard">📅</span> 18, 19 y 20 de Septiembre 2026
                 </div>
-                <div class="px-6 py-3 bg-cardBg border border-zinc-800 text-white shadow-[3px_3px_0px_#1f1f1f]">
-                    🏛️ Rivadavia • Ciudad • Cultura
+                <div class="bg-cardBg px-4 py-2 border border-zinc-800 flex items-center gap-2">
+                    <span class="text-mustard">📍</span> Rivadavia • Ciudad • Elina Alba
                 </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-mustard text-black font-extrabold text-base uppercase tracking-widest px-8 py-4 hover:bg-softPink transition-all border-2 border-black shadow-[5px_5px_0px_#a63b5b]">
+                    Comprar Entradas General 🎫
+                </a>
+                <a href="#lineup" class="w-full sm:w-auto bg-graphite text-white font-bold text-base uppercase tracking-widest px-8 py-4 hover:border-mustard border border-zinc-700 transition-all">
+                    Ver Lineup & Artistas 👇
+                </a>
             </div>
         </section>
 
         <!-- MANIFIESTO -->
-        <section id="manifiesto" class="py-20 bg-cardBg border-y border-graphite relative overflow-hidden">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <div class="inline-block mb-4 px-3 py-1 bg-wineRed text-white text-xs uppercase tracking-widest font-mono">
-                    EL MANIFIESTO ⚡
-                </div>
-                <h2 class="font-display text-4xl sm:text-6xl uppercase tracking-wide mb-8 leading-tight">
+        <section id="manifiesto" class="py-16 bg-cardBg border-y border-graphite">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-display text-3xl sm:text-5xl uppercase tracking-wider mb-6">
                     <span class="text-wineRed">OLVIDATE</span> <span class="text-mustard">DE TODO LO QUE TE CONTARON</span> <span class="text-wineRed">SOBRE EL TANGO.</span>
                 </h2>
-                
-                <div class="space-y-6 text-zinc-300 text-base sm:text-lg font-light leading-relaxed max-w-3xl mx-auto">
-                    <p class="font-semibold text-white">
-                        Algo se está gestando entre Santiago de Chile y Mendoza. Un nuevo pulso, una toma de aire fresco que viene a romper la inercia.
+                <div class="space-y-4 text-zinc-300 text-sm sm:text-base leading-relaxed text-justify sm:text-center font-light">
+                    <p>
+                        <strong>GOTÁN</strong> no es solo un festival: es un puente sonoro entre la Cordillera de los Andes y las dos capitales tangueras más importantes de la región. Con sede central en Mendoza y proyección internacional hacia Santiago de Chile, GOTÁN nace para desafiar la inercia y conectar el tango tradicional con la potencia de nuevas audiencias.
                     </p>
                     <p>
-                        No es lo de siempre. Es la crudeza de la calle cruzándose con la altura.
-                    </p>
-                    <p class="text-softPink font-medium">
-                        GOTÁN nace para trascender los formatos tradicionales y conectar con las nuevas audiencias a través de una propuesta contemporánea y potente.
-                    </p>
-                </div>
-
-                <div class="mt-12 p-6 bg-darkBg border border-mustard/30 inline-block text-left max-w-xl mx-auto shadow-xl">
-                    <div class="text-xs uppercase font-bold text-mustard tracking-widest mb-1">Proyección Internacional</div>
-                    <p class="text-xs sm:text-sm text-zinc-400">
-                        Esta primera edición marca el inicio del puente cultural en Mendoza (septiembre 2026), proyectando oficialmente nuestra <strong>segunda edición en Santiago de Chile</strong>.
+                        Durante tres noches consecutivas, tres escenarios icónicos albergarán milongas de alta energía, orquestas típicas de vanguardia, ensambles binacionales y tríos electrónicos. Nos mueve la convicción de que el tango está más vivo, rebelde y bailable que nunca.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- LINEUP & ARTISTAS (8 ARTISTAS) -->
-        <section id="lineup" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- LINEUP & ARTISTAS -->
+        <section id="lineup" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Lineup & Artistas</h2>
-                <p class="text-softPink uppercase tracking-widest text-sm">3 Días • 3 Espacios • Detalle exclusivo de cada ensamble</p>
+                <p class="text-softPink uppercase tracking-widest text-sm">Cada artista con su respectiva fotografía oficial integrada</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1. Vara Dorada -->
                 <div class="md:col-span-2 lg:col-span-3 p-8 sm:p-10 bg-gradient-to-r from-zinc-900 via-graphite to-zinc-900 border-grunge relative overflow-hidden group">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="absolute top-3 right-4 flex items-center gap-3 z-10">
+                        <a href="https://www.instagram.com/varadorada_tango/" target="_blank" rel="noopener noreferrer" class="text-softPink hover:text-mustard font-mono text-xs uppercase tracking-widest bg-darkBg px-3 py-1 border border-softPink/40 transition-colors">
+                            📸 @varadorada_tango
+                        </a>
+                        <div class="text-wineRed font-mono text-xs uppercase tracking-widest bg-darkBg px-3 py-1 border border-wineRed/40">Headliner Internacional</div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center pt-6 lg:pt-0">
                         <div class="lg:col-span-2">
-                            <div class="flex items-center gap-3 mb-2 flex-wrap">
-                                <a href="https://www.instagram.com/varadorada_tango/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard uppercase font-mono underline">📸 @varadorada_tango</a>
-                                <span class="text-wineRed font-mono text-xs uppercase tracking-widest bg-darkBg px-3 py-1 border border-wineRed/40">Headliner Internacional</span>
-                            </div>
                             <span class="text-xs uppercase tracking-widest text-softPink block mb-1">Desde Chile 🇨🇱 • Cierra las 3 Noches del Festival</span>
                             <h3 class="font-display text-4xl sm:text-6xl text-mustard uppercase tracking-widest mb-3">VARA DORADA</h3>
-                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed">
-                                Ensamble de tango concebido como un viaje sonoro a través de la rica historia y evolución del género. Bajo la dirección musical y arreglos de Tito Cerda, en esta visita el ensamble se presenta en formato integrado por Pancho Miranda (voz), Catalina Torres (violín), Jimena Rey (contrabajo) y Camilo Orellana (piano). Interpretan desde la crudeza del tango clásico hasta composiciones propias y un homenaje especial a Astor Piazzolla.
+                            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">
+                                Ensamble de tango de primer nivel que ofrece un espectáculo sumamente elegante y sofisticado, concebido como un viaje sonoro a través de la rica historia y evolución del género. Bajo la dirección musical y arreglos de Tito Cerda, el ensamble reúne a músicos virtuosos como Pancho Miranda (voz), Catalina Torres (violín), Jimena Rey (contrabajo) y Camilo Orellana (piano). Su repertorio abarca desde la crudeza del tango clásico hasta composiciones de autoría propia y un Homenaje a Ástor Piazzolla.
                             </p>
                         </div>
-                        <div class="w-full h-64 sm:h-72 bg-darkBg border border-zinc-800 p-2 flex items-center justify-center relative">
+                        <div class="w-full h-64 sm:h-72 bg-darkBg border border-zinc-800 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="varadorada.jpg" alt="Vara Dorada" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='varadorada.jpg.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='varadorada.jpg.jpeg';}else if(!this.dataset.t3){this.dataset.t3='1';this.src='varadorada.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-4">
-                                <span class="text-mustard font-bold text-base mb-1">🎭 VARA DORADA</span>
-                                <span class="text-zinc-400 text-xs">Ensamble Internacional (Chile 🇨🇱)</span>
-                                <span class="text-zinc-500 text-[10px] mt-2 border border-zinc-800 px-2 py-0.5">varadorada.jpg</span>
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='varadorada.jpg.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-4">
+                                <span class="font-display text-2xl text-mustard uppercase">VARA DORADA</span>
+                                <span class="text-xs text-zinc-400 mt-2 font-mono">Ensamble Internacional 🇨🇱</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2. Orquesta Escuela del 1800 -->
+                <!-- 2. Orquesta Escuela de Tango La del 1800 -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
-                            <img src="ladel1800_banda.jpg.jpg" alt="Orquesta Escuela del 1800" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='ladel1800_banda.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='ladel1800.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold mb-1">🎻 LA DEL 1800</span>
-                                <span class="text-zinc-500 text-[10px]">ladel1800_banda.jpg.jpg</span>
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="ladel1800_banda.jpg.jpg" alt="Orquesta Escuela La del 1800" class="max-w-full max-h-full object-contain object-center" 
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='ladel1800_banda.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">LA DEL 1800</span>
+                                <span class="text-xs text-zinc-400 font-mono">Orquesta Escuela</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta Escuela</span>
-                            <a href="https://www.instagram.com/ladel1800.ok/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">📸 @ladel1800.ok</a>
+                            <a href="https://www.instagram.com/ladel1800.ok/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard">@ladel1800.ok</a>
                         </div>
-                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Orquesta Escuela del 1800</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Escuela de tango para músicos, profesionales y estudiantes de Mendoza fundada en 2023. Su repertorio abarca el tango clásico de las grandes orquestas y el tango moderno del siglo XXI, incluyendo obras compuestas por mujeres y de la región cuyana.</p>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Orquesta Escuela de Tango La del 1800</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Escuela de tango para músicos, profesionales y estudiantes de Mendoza fundada en 2023. Su repertorio abarca el tango clásico de las grandes orquestas y el tango moderno del siglo XXI.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Este (Día 1)</div>
                 </div>
@@ -237,20 +234,20 @@
                 <!-- 3. Al Tango -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="altango.jpg.jpg" alt="Al Tango" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='altango.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='altango.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold mb-1">🎼 AL TANGO</span>
-                                <span class="text-zinc-500 text-[10px]">altango.jpg.jpg</span>
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='altango.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">AL TANGO</span>
+                                <span class="text-xs text-zinc-400 font-mono">Mendoza</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
-                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Ensamble</span>
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta de Tango</span>
                             <span class="text-xs text-zinc-500">Mendoza</span>
                         </div>
                         <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Al Tango</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Una orquesta de tango que respira tradición y se anima al presente con la fuerza del bandoneón, la profundidad del contrabajo, la elegancia del piano y un duelo de voces (Evelyn Vela y Raúl Gurí Vera). Interpretan clásicos con arreglos propios de su director.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Una orquesta de tango que respira tradición y se anima al presente con la fuerza del bandoneón, la profundidad del contrabajo y un duelo de voces.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Este (Día 1)</div>
                 </div>
@@ -258,20 +255,20 @@
                 <!-- 4. Cooperativa Bajo Club -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
-                            <img src="cooperativabajoclub.jpg.jpeg" alt="La Cooperativa Bajo Club" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='cooperativabajoclub.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='cooperativabajoclub.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold mb-1">🎸 BAJO CLUB</span>
-                                <span class="text-zinc-500 text-[10px]">cooperativabajoclub.jpg.jpeg</span>
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="cooperativabajoclub.jpg.jpeg" alt="Cooperativa Bajo Club" class="max-w-full max-h-full object-contain object-center" 
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='cooperativabajoclub.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">BAJO CLUB</span>
+                                <span class="text-xs text-zinc-400 font-mono">Ensamble de Bajos</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Ensamble de Bajos</span>
-                            <a href="https://www.instagram.com/cooperativabajoclub/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">📸 @cooperativabajoclub</a>
+                            <a href="https://www.instagram.com/cooperativabajoclub/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard">@cooperativabajoclub</a>
                         </div>
                         <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Cooperativa Bajo Club</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Ensamble de bajos eléctricos oriundo de Mendoza integrado por Julián Lucero, Emmanuel Rodríguez, Hernán Cremaschi y Federico Alma. Ofrecen arreglos originales de tangos clásicos y contemporáneos, explotando la versatilidad tímbrica del instrumento.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Ensamble de bajos eléctricos oriundo de Mendoza integrado por Julián Lucero, Emmanuel Rodríguez, Hernán Cremaschi y Federico Alma.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Ciudad (Día 2)</div>
                 </div>
@@ -279,41 +276,41 @@
                 <!-- 5. Broche de Oro -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="brochedeoro.jpg.jpg" alt="Broche de Oro" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='brochedeoro.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='brochedeoro.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold mb-1">🎷 BROCHE DE ORO</span>
-                                <span class="text-zinc-500 text-[10px]">brochedeoro.jpg.jpg</span>
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='brochedeoro.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">BROCHE DE ORO</span>
+                                <span class="text-xs text-zinc-400 font-mono">Mendoza / Chile</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
-                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Sexteto Binacional</span>
+                            <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Sexteto</span>
                             <span class="text-xs text-zinc-500">Mendoza / Chile</span>
                         </div>
                         <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Broche de Oro</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Agrupación binacional (Mendoza y Santiago de Chile) dedicada al tango como expresión viva del Río de la Plata. Con un sexteto de cuerdas y fuelle que rescata la potencia milonguera con espíritu trasandino.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Agrupación binacional de Mendoza y Santiago de Chile dedicada al tango como expresión del Río de la Plata.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Ciudad (Día 2)</div>
                 </div>
 
-                <!-- 6. Sexteto del 1800 -->
+                <!-- 6. Sexteto 1800 -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
-                            <img src="sexteto1800.jpg.jpg" alt="Sexteto del 1800" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='sexteto1800.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='sexteto1800.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold mb-1">🎻 SEXTETO DEL 1800</span>
-                                <span class="text-zinc-500 text-[10px]">sexteto1800.jpg.jpg</span>
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
+                            <img src="sexteto1800.jpg.jpg" alt="Sexteto 1800" class="max-w-full max-h-full object-contain object-center" 
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='sexteto1800.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">SEXTETO 1800</span>
+                                <span class="text-xs text-zinc-400 font-mono">Mendoza</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Sexteto Tradicional</span>
-                            <a href="https://www.instagram.com/sexteto1800/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">📸 @sexteto1800</a>
+                            <a href="https://www.instagram.com/sexteto1800/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard">@sexteto1800</a>
                         </div>
-                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Sexteto del 1800</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Formación derivada de la Orquesta Escuela que rescata el formato clásico de sexteto típico milonguero. Interpretaciones de alta fidelidad bailable con los arreglos de las grandes orquestas de los años 40.</p>
+                        <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Sexteto 1800</h4>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Agrupación tanguera de Mendoza que interpreta los estilos orquestales del tango milonguero tradicional.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Cultura (Día 3)</div>
                 </div>
@@ -321,20 +318,22 @@
                 <!-- 7. La Mundial Orkestra -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="lamundial.jpg.jpeg" alt="La Mundial Orkestra" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='lamundial.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='lamundial.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold mb-1">🪗 LA MUNDIAL</span>
-                                <span class="text-zinc-500 text-[10px]">lamundial.jpg.jpeg</span>
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='lamundial.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">LA MUNDIAL</span>
+                                <span class="text-xs text-zinc-400 font-mono">Orquesta Típica</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Orquesta Típica</span>
-                            <a href="https://www.instagram.com/lamundial_orkestra/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">📸 @lamundial_orkestra</a>
+                            <a href="https://www.instagram.com/lamundial_orkestra/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard">@lamundial_orkestra</a>
                         </div>
                         <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">La Mundial Orkestra</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Nacida a finales de 2022 en Mendoza, esta orquesta típica reúne violín, viola, cello, dos bandoneones, piano, contrabajo y voz. En 2026 presentan su primer disco <em>Tango Sucio</em> con la participación estelar de Hernán "Cucuza" Castiello. Su propuesta milonguera y enérgica reivindica el tango para escuchar y bailar.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Nacida en Mendoza a finales de 2022, reúne una fusión de violín, viola, cello, dos bandoneones, piano, contrabajo y voz. En este 2026 lanzan su primer disco <em>Tango Sucio</em>, con la participación estelar de Hernán "Cucuza" Castiello, ofreciendo un espectáculo milonguero de alta energía pensado tanto para bailar como para escuchar.
+                        </p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente en Sede Cultura (Día 3)</div>
                 </div>
@@ -342,111 +341,110 @@
                 <!-- 8. Tangorra -->
                 <div class="p-6 bg-cardBg border border-zinc-800 hover:border-mustard transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-56 bg-darkBg border border-zinc-800 mb-4 p-2 flex items-center justify-center relative">
+                        <div class="w-full h-48 bg-darkBg border border-zinc-800 mb-4 overflow-hidden relative flex items-center justify-center p-2">
                             <img src="tangorra.jpg" alt="Tangorra" class="max-w-full max-h-full object-contain object-center" 
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='tangorra.jpg.jpg';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='tangorra.jpg.jpeg';}else if(!this.dataset.t3){this.dataset.t3='1';this.src='tangorra.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden flex flex-col items-center justify-center text-zinc-400 font-mono text-xs text-center p-2">
-                                <span class="text-mustard font-bold text-base mb-1">⚡ TANGORRA</span>
-                                <span class="text-zinc-400 text-xs">Trío Electrónico (Buenos Aires 🇦🇷)</span>
-                                <span class="text-zinc-500 text-[10px] mt-1 border border-zinc-800 px-2 py-0.5">tangorra.jpg</span>
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='tangorra.jpg.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center justify-center text-center p-2">
+                                <span class="font-display text-lg text-mustard uppercase">TANGORRA</span>
+                                <span class="text-xs text-zinc-400 font-mono">Trío Electrónico 🇦🇷</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mb-3">
                             <span class="text-xs text-softPink uppercase tracking-wider font-mono bg-graphite px-2 py-0.5 border border-zinc-700">Trío Electrónico</span>
-                            <a href="https://www.instagram.com/tangorraorquesta/" target="_blank" rel="noopener noreferrer" class="text-xs text-mustard hover:underline font-mono">📸 @tangorraorquesta</a>
+                            <a href="https://www.instagram.com/tangorraorquesta/" target="_blank" rel="noopener noreferrer" class="text-xs text-softPink hover:text-mustard">@tangorraorquesta</a>
                         </div>
                         <h4 class="font-display text-2xl text-white group-hover:text-mustard transition-colors tracking-wide mb-2">Tangorra</h4>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Proyecto porteño (Buenos Aires) con más de 16 años de carrera mezclando tango, beats electrónicos y sonoridades urbanas. Llegan a GOTÁN 2026 presentando su nuevo material discográfico <em>En Trance</em> en una fecha exclusiva.</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Banda porteña (Buenos Aires) con 16 años de trayectoria, presentando su álbum <em>En Trance</em>.</p>
                     </div>
                     <div class="mt-6 pt-4 border-t border-zinc-900 text-xs text-zinc-500 uppercase tracking-widest">Presente exclusivamente en Sede Cultura (Día 3)</div>
                 </div>
             </div>
         </section>
 
-        <!-- SEDES Y FECHAS (3 DÍAS CON VENTA INDIVIDUAL) -->
-        <section id="sedes" class="py-20 bg-cardBg border-y border-graphite">
+        <!-- SEDES Y FECHAS -->
+        <section id="sedes" class="py-16 bg-cardBg border-t border-graphite">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Sedes & Programación</h2>
-                    <p class="text-mustard uppercase tracking-widest text-sm">3 Días de Festival • Comprá tu ticket individual para cada función</p>
+                    <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">3 Días • 3 Sedes</h2>
+                    <p class="text-softPink uppercase tracking-widest text-sm">Hacé clic en cada botón para adquirir tu ticket por función en EntradaWeb</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Día 1 -->
-                    <div class="p-8 bg-darkBg border border-zinc-800 hover:border-mustard transition-all flex flex-col justify-between">
+                    <!-- DÍA 1 -->
+                    <div class="bg-darkBg p-8 border border-zinc-800 hover:border-mustard transition-all flex flex-col justify-between">
                         <div>
-                            <div class="text-xs font-mono uppercase text-wineRed tracking-widest mb-2 font-bold">DÍA 1 • VIERNES 18 SEPT</div>
-                            <h3 class="font-display text-3xl text-white uppercase mb-2">SEDE ESTE</h3>
-                            <p class="text-softPink text-xs uppercase font-mono mb-4">Teatro Municipal Luis Encio Bianchi</p>
-                            <p class="text-zinc-400 text-xs mb-6">Lavalle, Rivadavia, Mendoza</p>
-                            
-                            <div class="space-y-2 border-t border-zinc-900 pt-4 mb-8 text-xs text-zinc-300">
-                                <div class="font-bold text-white mb-2">Lineup de la noche:</div>
-                                <div>• Orquesta Escuela del 1800</div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-mustard font-mono font-bold text-sm tracking-widest uppercase">DÍA 1 • 18 SEPT</span>
+                                <span class="text-xs text-zinc-500 uppercase font-mono">SEDE ESTE</span>
+                            </div>
+                            <h3 class="font-display text-3xl text-white uppercase mb-2">Teatro Municipal Luis Encio Bianchi</h3>
+                            <p class="text-zinc-400 text-xs uppercase tracking-wider mb-6">Lavalle, Rivadavia, Mendoza</p>
+                            <div class="border-t border-zinc-800 pt-4 mb-6 space-y-2 text-sm text-zinc-300">
+                                <div class="font-bold text-softPink text-xs uppercase tracking-wider mb-1">Lineup de la noche:</div>
+                                <div>• Orquesta Escuela La del 1800</div>
                                 <div>• Al Tango</div>
-                                <div class="text-mustard font-bold">• Vara Dorada (Chile)</div>
+                                <div>• Vara Dorada (Chile 🇨🇱)</div>
                             </div>
                         </div>
-
                         <div class="space-y-3">
-                            <a href="https://maps.google.com/?cid=14826299724409201682" target="_blank" rel="noopener noreferrer" class="block text-center py-2 bg-graphite text-zinc-300 hover:text-white text-xs uppercase font-mono tracking-wider border border-zinc-700">
-                                📍 Cómo llegar (Google Maps)
+                            <a href="https://maps.google.com/?cid=14826299724409201682" target="_blank" rel="noopener noreferrer" class="block text-center text-xs uppercase tracking-widest text-zinc-400 hover:text-mustard py-2 border border-zinc-800">
+                                📍 Abrir en Google Maps
                             </a>
-                            <a href="https://www.entradaweb.com.ar/evento/43c855f0/step/1" target="_blank" rel="noopener noreferrer" class="block text-center py-3 bg-mustard text-black font-extrabold text-xs uppercase tracking-wider hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b]">
-                                Ticket Día 1 🎟️
+                            <a href="https://www.entradaweb.com.ar/evento/43c855f0/step/1" target="_blank" rel="noopener noreferrer" class="block w-full bg-mustard text-black text-center font-extrabold py-3 uppercase tracking-wider text-xs hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b]">
+                                Entradas Día 1 🎟️
                             </a>
                         </div>
                     </div>
 
-                    <!-- Día 2 -->
-                    <div class="p-8 bg-darkBg border border-zinc-800 hover:border-mustard transition-all flex flex-col justify-between">
+                    <!-- DÍA 2 -->
+                    <div class="bg-darkBg p-8 border border-zinc-800 hover:border-mustard transition-all flex flex-col justify-between">
                         <div>
-                            <div class="text-xs font-mono uppercase text-wineRed tracking-widest mb-2 font-bold">DÍA 2 • SÁBADO 19 SEPT</div>
-                            <h3 class="font-display text-3xl text-white uppercase mb-2">SEDE CIUDAD</h3>
-                            <p class="text-softPink text-xs uppercase font-mono mb-4">La Cantina del Juglar</p>
-                            <p class="text-zinc-400 text-xs mb-6">Av. Hipólito Yrigoyen 295, Ciudad, Mendoza</p>
-                            
-                            <div class="space-y-2 border-t border-zinc-900 pt-4 mb-8 text-xs text-zinc-300">
-                                <div class="font-bold text-white mb-2">Lineup de la noche:</div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-mustard font-mono font-bold text-sm tracking-widest uppercase">DÍA 2 • 19 SEPT</span>
+                                <span class="text-xs text-zinc-500 uppercase font-mono">SEDE CIUDAD</span>
+                            </div>
+                            <h3 class="font-display text-3xl text-white uppercase mb-2">La Cantina del Juglar</h3>
+                            <p class="text-zinc-400 text-xs uppercase tracking-wider mb-6">Av. Hipólito Yrigoyen 295, Ciudad de Mendoza</p>
+                            <div class="border-t border-zinc-800 pt-4 mb-6 space-y-2 text-sm text-zinc-300">
+                                <div class="font-bold text-softPink text-xs uppercase tracking-wider mb-1">Lineup de la noche:</div>
                                 <div>• Cooperativa Bajo Club</div>
                                 <div>• Broche de Oro</div>
-                                <div class="text-mustard font-bold">• Vara Dorada (Chile)</div>
+                                <div>• Vara Dorada (Chile 🇨🇱)</div>
                             </div>
                         </div>
-
                         <div class="space-y-3">
-                            <a href="https://maps.google.com/?cid=9566261775574080507" target="_blank" rel="noopener noreferrer" class="block text-center py-2 bg-graphite text-zinc-300 hover:text-white text-xs uppercase font-mono tracking-wider border border-zinc-700">
-                                📍 Cómo llegar (Google Maps)
+                            <a href="https://maps.google.com/?cid=9566261775574080507" target="_blank" rel="noopener noreferrer" class="block text-center text-xs uppercase tracking-widest text-zinc-400 hover:text-mustard py-2 border border-zinc-800">
+                                📍 Abrir en Google Maps
                             </a>
-                            <a href="https://www.entradaweb.com.ar/evento/6dadab2d/step/1" target="_blank" rel="noopener noreferrer" class="block text-center py-3 bg-mustard text-black font-extrabold text-xs uppercase tracking-wider hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b]">
-                                Ticket Día 2 🎟️
+                            <a href="https://www.entradaweb.com.ar/evento/6dadab2d/step/1" target="_blank" rel="noopener noreferrer" class="block w-full bg-mustard text-black text-center font-extrabold py-3 uppercase tracking-wider text-xs hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b]">
+                                Entradas Día 2 🎟️
                             </a>
                         </div>
                     </div>
 
-                    <!-- Día 3 -->
-                    <div class="p-8 bg-darkBg border border-zinc-800 hover:border-mustard transition-all flex flex-col justify-between">
+                    <!-- DÍA 3 -->
+                    <div class="bg-darkBg p-8 border border-zinc-800 hover:border-mustard transition-all flex flex-col justify-between">
                         <div>
-                            <div class="text-xs font-mono uppercase text-wineRed tracking-widest mb-2 font-bold">DÍA 3 • DOMINGO 20 SEPT</div>
-                            <h3 class="font-display text-3xl text-white uppercase mb-2">SEDE CULTURA</h3>
-                            <p class="text-softPink text-xs uppercase font-mono mb-4">Sala Elina Alba / Secretaría de Cultura</p>
-                            <p class="text-zinc-400 text-xs mb-6">Gutiérrez 204, Ciudad de Mendoza</p>
-                            
-                            <div class="space-y-2 border-t border-zinc-900 pt-4 mb-8 text-xs text-zinc-300">
-                                <div class="font-bold text-white mb-2">Lineup Gran Cierre:</div>
-                                <div>• Sexteto del 1800</div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-mustard font-mono font-bold text-sm tracking-widest uppercase">DÍA 3 • 20 SEPT</span>
+                                <span class="text-xs text-zinc-500 uppercase font-mono">SEDE CULTURA</span>
+                            </div>
+                            <h3 class="font-display text-3xl text-white uppercase mb-2">Sala Elina Alba</h3>
+                            <p class="text-zinc-400 text-xs uppercase tracking-wider mb-6">Secretaría de Cultura (Gutiérrez 204, Ciudad)</p>
+                            <div class="border-t border-zinc-800 pt-4 mb-6 space-y-2 text-sm text-zinc-300">
+                                <div class="font-bold text-softPink text-xs uppercase tracking-wider mb-1">Gran Cierre del Festival:</div>
+                                <div>• Sexteto 1800</div>
                                 <div>• La Mundial Orkestra</div>
-                                <div>• Tangorra (Bs. As.)</div>
-                                <div class="text-mustard font-bold">• Vara Dorada (Chile)</div>
+                                <div>• Tangorra (Buenos Aires 🇦🇷)</div>
+                                <div>• Vara Dorada (Chile 🇨🇱)</div>
                             </div>
                         </div>
-
                         <div class="space-y-3">
-                            <a href="https://maps.google.com/?cid=5937969139937596827" target="_blank" rel="noopener noreferrer" class="block text-center py-2 bg-graphite text-zinc-300 hover:text-white text-xs uppercase font-mono tracking-wider border border-zinc-700">
-                                📍 Cómo llegar (Google Maps)
+                            <a href="https://maps.google.com/?cid=5937969139937596827" target="_blank" rel="noopener noreferrer" class="block text-center text-xs uppercase tracking-widest text-zinc-400 hover:text-mustard py-2 border border-zinc-800">
+                                📍 Abrir en Google Maps
                             </a>
-                            <a href="https://www.entradaweb.com.ar/evento/6cdba68d/step/1" target="_blank" rel="noopener noreferrer" class="block text-center py-3 bg-mustard text-black font-extrabold text-xs uppercase tracking-wider hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b]">
-                                Ticket Día 3 🎟️
+                            <a href="https://www.entradaweb.com.ar/evento/6cdba68d/step/1" target="_blank" rel="noopener noreferrer" class="block w-full bg-mustard text-black text-center font-extrabold py-3 uppercase tracking-wider text-xs hover:bg-softPink transition-all shadow-[3px_3px_0px_#a63b5b]">
+                                Entradas Día 3 🎟️
                             </a>
                         </div>
                     </div>
@@ -454,274 +452,201 @@
             </div>
         </section>
 
-        <!-- ALIADOS, SPONSORS & ORGANIZACIÓN COMPLETA -->
-        <section id="alianzas" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- ALIADOS, SPONSORS & ORGANIZACIÓN -->
+        <section id="alianzas" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl sm:text-6xl text-white uppercase mb-3 tracking-wide">Aliados, Sponsors & Organización</h2>
-                <p class="text-zinc-400 uppercase tracking-widest text-sm max-w-2xl mx-auto">Instituciones, marcas y colectivos culturales que impulsan GOTÁN 2026. Hacé clic en cada logo o badge para visitar sus canales oficiales de Instagram.</p>
+                <p class="text-softPink uppercase tracking-widest text-sm">Instituciones, marcas y productoras que impulsan GOTÁN 2026. Hacé clic en cada marca para visitar sus canales oficiales.</p>
             </div>
 
-            <!-- FILA 1: ORGANIZA Y PRODUCE (3 LOGOS) -->
-            <div class="mb-16">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="h-px bg-mustard/40 flex-grow"></span>
-                    <h3 class="font-display text-xl sm:text-2xl text-mustard uppercase tracking-widest px-4">Organiza y Produce</h3>
-                    <span class="h-px bg-mustard/40 flex-grow"></span>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Felo Barbosa Producciones -->
-                    <a href="https://www.instagram.com/felo.barbosa/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-6 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group rounded-sm min-h-[180px]">
-                        <div class="w-full flex-grow flex items-center justify-center py-2">
-                            <img src="felobarbosa.png" alt="Felo Barbosa Producciones" class="max-h-20 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='felobarbosa.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='felobarbosa.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden text-center py-2">
-                                <span class="font-display text-2xl text-white group-hover:text-mustard transition-colors block">FELO BARBOSA</span>
-                                <span class="text-xs text-zinc-400 uppercase font-mono">Producción General</span>
+            <div class="space-y-16">
+                <!-- FILA 1: ORGANIZA Y PRODUCE (3 Logos) -->
+                <div>
+                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3">Organiza y Produce</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Felo Barbosa -->
+                        <a href="https://www.instagram.com/felo.barbosa/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
+                            <img src="felobarbosa.png" alt="Felo Barbosa Producciones" class="max-h-20 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='felobarbosa.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center">
+                                <span class="font-display text-xl text-white group-hover:text-mustard uppercase">Felo Barbosa</span>
+                                <span class="text-xs text-zinc-400 font-mono mt-1">Producción General</span>
                             </div>
-                        </div>
-                        <div class="w-full pt-3 border-t border-zinc-900 flex items-center justify-between text-xs font-mono">
-                            <span class="text-zinc-400 uppercase">Organización</span>
-                            <span class="text-mustard group-hover:underline">📸 @felo.barbosa ↗</span>
-                        </div>
-                    </a>
-
-                    <!-- La del 1800 -->
-                    <a href="https://www.instagram.com/ladel1800.ok/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-6 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group rounded-sm min-h-[180px]">
-                        <div class="w-full flex-grow flex items-center justify-center py-2">
-                            <img src="ladel1800.png" alt="La del 1800" class="max-h-20 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='ladel1800.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='ladel1800.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden text-center py-2">
-                                <span class="font-display text-2xl text-white group-hover:text-mustard transition-colors block">LA DEL 1800</span>
-                                <span class="text-xs text-zinc-400 uppercase font-mono">Colectivo Cultural</span>
-                            </div>
-                        </div>
-                        <div class="w-full pt-3 border-t border-zinc-900 flex items-center justify-between text-xs font-mono">
-                            <span class="text-zinc-400 uppercase">Organización</span>
-                            <span class="text-mustard group-hover:underline">📸 @ladel1800.ok ↗</span>
-                        </div>
-                    </a>
-
-                    <!-- La Cooperativa -->
-                    <a href="https://www.instagram.com/cooperativabajoclub/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-6 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group rounded-sm min-h-[180px]">
-                        <div class="w-full flex-grow flex items-center justify-center py-2">
-                            <img src="cooperativa.png" alt="La Cooperativa" class="max-h-20 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='cooperativa.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='cooperativa.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden text-center py-2">
-                                <span class="font-display text-2xl text-white group-hover:text-mustard transition-colors block">LA COOPERATIVA</span>
-                                <span class="text-xs text-zinc-400 uppercase font-mono">Productora Musical</span>
-                            </div>
-                        </div>
-                        <div class="w-full pt-3 border-t border-zinc-900 flex items-center justify-between text-xs font-mono">
-                            <span class="text-zinc-400 uppercase">Organización</span>
-                            <span class="text-mustard group-hover:underline">📸 @cooperativabajoclub ↗</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- FILA 2: ALIADOS INSTITUCIONALES (2 LOGOS) -->
-            <div class="mb-16">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="h-px bg-softPink/40 flex-grow"></span>
-                    <h3 class="font-display text-xl sm:text-2xl text-softPink uppercase tracking-widest px-4">Aliados Institucionales</h3>
-                    <span class="h-px bg-softPink/40 flex-grow"></span>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                    <!-- Gobierno de Mendoza -->
-                    <a href="https://www.instagram.com/cultura.mendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-6 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group rounded-sm min-h-[200px]">
-                        <div class="w-full flex-grow flex items-center justify-center py-3">
-                            <img src="mendoza.png" alt="Gobierno de Mendoza - Subsecretaría de Cultura" class="max-h-24 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='mendoza.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='mendoza.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden text-center py-2">
-                                <span class="font-display text-2xl text-white group-hover:text-softPink transition-colors block">GOBIERNO DE MENDOZA</span>
-                                <span class="text-xs text-zinc-400 uppercase font-mono">Subsecretaría de Cultura</span>
-                            </div>
-                        </div>
-                        <div class="w-full pt-3 border-t border-zinc-900 flex items-center justify-between text-xs font-mono">
-                            <span class="text-softPink uppercase font-bold">🏛️ Aliado Institucional</span>
-                            <span class="text-softPink group-hover:underline font-bold">📸 @cultura.mendoza ↗</span>
-                        </div>
-                    </a>
-
-                    <!-- Municipalidad de Rivadavia -->
-                    <a href="https://www.instagram.com/rivadaviamendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-6 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group rounded-sm min-h-[200px]">
-                        <div class="w-full flex-grow flex items-center justify-center py-3">
-                            <img src="rivadavia.png" alt="Municipalidad de Rivadavia" class="max-h-24 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                            onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='rivadavia.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='rivadavia.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                            <div class="hidden text-center py-2">
-                                <span class="font-display text-2xl text-white group-hover:text-softPink transition-colors block">MUNICIPALIDAD DE RIVADAVIA</span>
-                                <span class="text-xs text-zinc-400 uppercase font-mono">Gestión Cultural Rivadavia</span>
-                            </div>
-                        </div>
-                        <div class="w-full pt-3 border-t border-zinc-900 flex items-center justify-between text-xs font-mono">
-                            <span class="text-softPink uppercase font-bold">🏛️ Aliado Institucional</span>
-                            <span class="text-softPink group-hover:underline font-bold">📸 @rivadaviamendoza ↗</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- FILA 3: AUSPICIAN (9 LOGOS EN 2 SUB-FILAS CON PANELES E INSTAGRAMS) -->
-            <div>
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="h-px bg-zinc-700 flex-grow"></span>
-                    <h3 class="font-display text-xl sm:text-2xl text-white uppercase tracking-widest px-4">Auspician</h3>
-                    <span class="h-px bg-zinc-700 flex-grow"></span>
-                </div>
-
-                <div class="space-y-6">
-                    <!-- Sub-fila Superior (3 Auspiciantes Destacados) -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        <!-- Mora Hostel -->
-                        <a href="https://www.instagram.com/morahostel" target="_blank" rel="noopener noreferrer" class="sponsor-card p-5 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[150px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-2">
-                                <img src="morahostel.png" alt="Mora Hostel" class="max-h-16 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='morahostel.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='morahostel.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-lg text-white group-hover:text-mustard transition-colors">MORA HOSTEL</span>
-                                </div>
-                            </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 flex items-center justify-between text-[11px] font-mono">
-                                <span class="text-zinc-500">Alojamiento</span>
-                                <span class="text-zinc-300 group-hover:text-mustard">📸 @morahostel ↗</span>
-                            </div>
+                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @felo.barbosa ↗</span>
                         </a>
 
-                        <!-- Hostel Sin Fin -->
-                        <a href="https://www.instagram.com/hostelsinfin/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-5 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[150px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-2">
-                                <img src="sinfin.png" alt="Hostel Sin Fin" class="max-h-16 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='sinfin.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='sinfin.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-lg text-white group-hover:text-mustard transition-colors">HOSTEL SIN FIN</span>
-                                </div>
+                        <!-- La del 1800 -->
+                        <a href="https://www.instagram.com/ladel1800.ok/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
+                            <img src="ladel1800.png" alt="La del 1800" class="max-h-20 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='ladel1800.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center">
+                                <span class="font-display text-xl text-white group-hover:text-mustard uppercase">La del 1800</span>
+                                <span class="text-xs text-zinc-400 font-mono mt-1">Producción Musical</span>
                             </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 flex items-center justify-between text-[11px] font-mono">
-                                <span class="text-zinc-500">Alojamiento</span>
-                                <span class="text-zinc-300 group-hover:text-mustard">📸 @hostelsinfin ↗</span>
-                            </div>
+                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @ladel1800.ok ↗</span>
                         </a>
 
-                        <!-- Sanix -->
-                        <a href="https://www.instagram.com/sanix.saneamientos/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-5 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[150px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-2">
-                                <img src="sanix.png" alt="Sanix Saneamientos" class="max-h-16 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='sanix.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='sanix.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-lg text-white group-hover:text-mustard transition-colors">SANIX</span>
-                                </div>
+                        <!-- La Cooperativa -->
+                        <a href="https://www.instagram.com/cooperativabajoclub/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
+                            <img src="cooperativa.png" alt="La Cooperativa" class="max-h-20 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='cooperativa.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center">
+                                <span class="font-display text-xl text-white group-hover:text-mustard uppercase">La Cooperativa</span>
+                                <span class="text-xs text-zinc-400 font-mono mt-1">Co-producción</span>
                             </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 flex items-center justify-between text-[11px] font-mono">
-                                <span class="text-zinc-500">Servicios</span>
-                                <span class="text-zinc-300 group-hover:text-mustard">📸 @sanix.saneamientos ↗</span>
-                            </div>
+                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @cooperativabajoclub ↗</span>
                         </a>
                     </div>
+                </div>
 
-                    <!-- Sub-fila Inferior (6 Auspiciantes Gastronómicos & Vinoteca) -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                        <!-- La Primavera -->
-                        <a href="https://www.instagram.com/pizzeriaprimavera1/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-4 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[140px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-1">
-                                <img src="primavera.png" alt="La Primavera Pizzería" class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='primavera.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='primavera.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-sm text-white group-hover:text-mustard">LA PRIMAVERA</span>
-                                </div>
+                <!-- FILA 2: ALIADOS INSTITUCIONALES (2 Logos) -->
+                <div>
+                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3">Aliados Institucionales</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Mendoza -->
+                        <a href="https://www.instagram.com/cultura.mendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
+                            <img src="mendoza.png" alt="Gobierno de Mendoza - Subsecretaría de Cultura" class="max-h-20 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='mendoza.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center">
+                                <span class="font-display text-xl text-white group-hover:text-mustard uppercase">Cultura Mendoza</span>
+                                <span class="text-xs text-zinc-400 font-mono mt-1">Gobierno de Mendoza</span>
                             </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 text-center text-[10px] font-mono text-zinc-400 group-hover:text-mustard">
-                                📸 @pizzeriaprimavera1
-                            </div>
+                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @cultura.mendoza ↗</span>
                         </a>
 
-                        <!-- La Crosta -->
-                        <a href="https://www.instagram.com/lacrosta_pizzeria_/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-4 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[140px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-1">
-                                <img src="lacrosta.png" alt="La Crosta Pizzería" class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='lacrosta.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='lacrosta.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-sm text-white group-hover:text-mustard">LA CROSTA</span>
-                                </div>
+                        <!-- Rivadavia -->
+                        <a href="https://www.facebook.com/RivadaviaMendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[160px]">
+                            <img src="rivadavia.png" alt="Municipalidad de Rivadavia" class="max-h-20 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                            onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='rivadavia.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                            <div class="hidden flex-col items-center">
+                                <span class="font-display text-xl text-white group-hover:text-mustard uppercase">Muni Rivadavia</span>
+                                <span class="text-xs text-zinc-400 font-mono mt-1">Municipalidad de Rivadavia</span>
                             </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 text-center text-[10px] font-mono text-zinc-400 group-hover:text-mustard">
-                                📸 @lacrosta_pizzeria_
-                            </div>
+                            <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">Facebook Rivadavia Mendoza ↗</span>
                         </a>
+                    </div>
+                </div>
 
-                        <!-- Biribiri -->
-                        <a href="https://www.instagram.com/biribiri.cantina/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-4 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[140px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-1">
-                                <img src="biribiri.png" alt="Biribiri Cantina" class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='biribiri.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='biribiri.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-sm text-white group-hover:text-mustard">BIRIBIRI</span>
+                <!-- FILA 3: AUSPICIAN (9 Logos divididos en 2 sub-filas sin separador) -->
+                <div>
+                    <h3 class="font-display text-2xl text-mustard uppercase tracking-widest mb-6 border-b border-graphite pb-3">Auspician</h3>
+                    <div class="space-y-6">
+                        <!-- Sub-fila 1 (3 Logos) -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Mora Hostel -->
+                            <a href="https://www.instagram.com/morahostel" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[140px]">
+                                <img src="morahostel.png" alt="Mora Hostel" class="max-h-16 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='morahostel.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-lg text-white group-hover:text-mustard uppercase">Mora Hostel</span>
                                 </div>
-                            </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 text-center text-[10px] font-mono text-zinc-400 group-hover:text-mustard">
-                                📸 @biribiri.cantina
-                            </div>
-                        </a>
+                                <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @morahostel ↗</span>
+                            </a>
 
-                        <!-- Desayunos Mendoza -->
-                        <a href="https://www.instagram.com/desayunos.mendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-4 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[140px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-1">
-                                <img src="desayunosmendoza.png" alt="Desayunos Mendoza" class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='desayunosmendoza.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='desayunosmendoza.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-sm text-white group-hover:text-mustard">DESAYUNOS MENDOZA</span>
+                            <!-- Hostel Sin Fin -->
+                            <a href="https://www.instagram.com/hostelsinfin/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[140px]">
+                                <img src="sinfin.png" alt="Hostel Sin Fin" class="max-h-16 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='sinfin.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-lg text-white group-hover:text-mustard uppercase">Hostel Sin Fin</span>
                                 </div>
-                            </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 text-center text-[10px] font-mono text-zinc-400 group-hover:text-mustard">
-                                📸 @desayunos.mendoza
-                            </div>
-                        </a>
+                                <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @hostelsinfin ↗</span>
+                            </a>
 
-                        <!-- Cantina Juglar -->
-                        <a href="https://www.instagram.com/cantinajuglar/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-4 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[140px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-1">
-                                <img src="cantinajuglar.png" alt="Cantina Juglar Rivadavia" class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='cantinajuglar.png.png';}else if(!this.dataset.t2){this.dataset.t2='1';this.src='cantinajuglar.jpg';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-sm text-white group-hover:text-mustard">CANTINA JUGLAR</span>
+                            <!-- Sanix -->
+                            <a href="https://www.instagram.com/sanix.saneamientos/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-6 flex flex-col items-center justify-center text-center group min-h-[140px]">
+                                <img src="sanix.png" alt="Sanix" class="max-h-16 w-auto object-contain mb-3 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='sanix.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-lg text-white group-hover:text-mustard uppercase">Sanix</span>
                                 </div>
-                            </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 text-center text-[10px] font-mono text-zinc-400 group-hover:text-mustard">
-                                📸 @cantinajuglar
-                            </div>
-                        </a>
+                                <span class="text-xs text-softPink group-hover:text-mustard font-mono mt-2">📸 @sanix.saneamientos ↗</span>
+                            </a>
+                        </div>
 
-                        <!-- Elixir Vinoteca -->
-                        <a href="https://www.instagram.com/elixirvinoteca/" target="_blank" rel="noopener noreferrer" class="sponsor-card p-4 bg-cardBg border border-zinc-800 flex flex-col items-center justify-between group min-h-[140px]">
-                            <div class="w-full flex-grow flex items-center justify-center py-1">
-                                <img src="elixir.png" alt="Elixir Vinoteca" class="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                                onerror="if(!this.dataset.t1){this.dataset.t1='1';this.src='elixir.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
-                                <div class="hidden text-center">
-                                    <span class="font-display text-sm text-white group-hover:text-mustard">ELIXIR VINOTECA</span>
+                        <!-- Sub-fila 2 (6 Logos) -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                            <!-- La Primavera -->
+                            <a href="https://www.instagram.com/pizzeriaprimavera1/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-5 flex flex-col items-center justify-center text-center group min-h-[130px]">
+                                <img src="primavera.png" alt="La Primavera Pizzería" class="max-h-14 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='primavera.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-sm text-white group-hover:text-mustard uppercase">La Primavera</span>
                                 </div>
-                            </div>
-                            <div class="w-full pt-2 border-t border-zinc-900 text-center text-[10px] font-mono text-zinc-400 group-hover:text-mustard">
-                                📸 @elixirvinoteca
-                            </div>
-                        </a>
+                                <span class="text-[11px] text-softPink group-hover:text-mustard font-mono mt-1">📸 @pizzeriaprimavera1 ↗</span>
+                            </a>
+
+                            <!-- La Crosta -->
+                            <a href="https://www.instagram.com/lacrosta_pizzeria_/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-5 flex flex-col items-center justify-center text-center group min-h-[130px]">
+                                <img src="lacrosta.png" alt="La Crosta Pizzería" class="max-h-14 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='lacrosta.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-sm text-white group-hover:text-mustard uppercase">La Crosta</span>
+                                </div>
+                                <span class="text-[11px] text-softPink group-hover:text-mustard font-mono mt-1">📸 @lacrosta_pizzeria_ ↗</span>
+                            </a>
+
+                            <!-- Biribiri -->
+                            <a href="https://www.instagram.com/biribiri.cantina/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-5 flex flex-col items-center justify-center text-center group min-h-[130px]">
+                                <img src="biribiri.png" alt="Biribiri Cantina" class="max-h-14 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='biribiri.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-sm text-white group-hover:text-mustard uppercase">Biribiri Cantina</span>
+                                </div>
+                                <span class="text-[11px] text-softPink group-hover:text-mustard font-mono mt-1">📸 @biribiri.cantina ↗</span>
+                            </a>
+
+                            <!-- Desayunos Mendoza -->
+                            <a href="https://www.instagram.com/desayunos.mendoza/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-5 flex flex-col items-center justify-center text-center group min-h-[130px]">
+                                <img src="desayunosmendoza.png" alt="Desayunos Mendoza" class="max-h-14 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='desayunosmendoza.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-sm text-white group-hover:text-mustard uppercase">Desayunos MZA</span>
+                                </div>
+                                <span class="text-[11px] text-softPink group-hover:text-mustard font-mono mt-1">📸 @desayunos.mendoza ↗</span>
+                            </a>
+
+                            <!-- Cantina Juglar -->
+                            <a href="https://www.instagram.com/cantinajuglar/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-5 flex flex-col items-center justify-center text-center group min-h-[130px]">
+                                <img src="cantinajuglar.png" alt="Cantina Juglar" class="max-h-14 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='cantinajuglar.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-sm text-white group-hover:text-mustard uppercase">Cantina Juglar</span>
+                                </div>
+                                <span class="text-[11px] text-softPink group-hover:text-mustard font-mono mt-1">📸 @cantinajuglar ↗</span>
+                            </a>
+
+                            <!-- Elixir -->
+                            <a href="https://www.instagram.com/elixirvinoteca/" target="_blank" rel="noopener noreferrer" class="sponsor-card bg-cardBg border border-zinc-800 p-5 flex flex-col items-center justify-center text-center group min-h-[130px]">
+                                <img src="elixir.png" alt="Elixir Vinoteca" class="max-h-14 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                                onerror="if(!this.dataset.tried){this.dataset.tried='true';this.src='elixir.png.png';}else{this.style.display='none';this.nextElementSibling.classList.remove('hidden');}">
+                                <div class="hidden flex-col items-center">
+                                    <span class="font-display text-sm text-white group-hover:text-mustard uppercase">Elixir Vinoteca</span>
+                                </div>
+                                <span class="text-[11px] text-softPink group-hover:text-mustard font-mono mt-1">📸 @elixirvinoteca ↗</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- BANNER CTA SPONSOR -->
-        <section class="bg-wineRed py-16 sm:py-20 px-4 sm:px-6 lg:px-8 text-center border-y border-graphite">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="font-display text-4xl sm:text-6xl text-white uppercase tracking-wider mb-4 leading-tight">
+        <!-- CTA BANNER SPONSOREO -->
+        <section class="bg-wineRed py-16 px-4 sm:px-6 lg:px-8 border-y-2 border-black text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <span class="text-mustard font-mono text-xs uppercase tracking-widest block mb-2 font-bold">¿Querés que tu marca o institución auspicie el festival?</span>
+                <h2 class="font-display text-5xl sm:text-7xl text-white uppercase tracking-wider mb-4 drop-shadow-md">
                     SÉ PARTE DE LA HISTORIA
                 </h2>
-                <p class="max-w-2xl mx-auto text-base sm:text-lg text-white/90 font-light mb-8 leading-relaxed">
-                    Sumá tu marca o empresa a la primera edición de GOTÁN. Escribinos para recibir nuestra propuesta de sponsoreo y alianzas comerciales.
+                <p class="text-zinc-100 text-sm sm:text-base max-w-2xl mx-auto mb-8 font-light">
+                    Sumate como auspiciante a la primera edición de GOTÁN en Mendoza y su proyección internacional hacia Santiago de Chile. Contactate directamente con la producción general.
                 </p>
-                <div>
-                    <a href="mailto:gotanfestival@gmail.com" class="inline-block bg-mustard text-black font-extrabold px-8 py-4 uppercase tracking-wider text-sm sm:text-base border border-black shadow-[5px_5px_0px_#0a0a0a] hover:bg-white hover:translate-x-0.5 hover:translate-y-0.5 transition-all">
-                        QUIERO SER SPONSOR ✉️
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/5492617527727" target="_blank" rel="noopener noreferrer" class="bg-mustard text-black font-extrabold px-8 py-4 uppercase tracking-widest text-sm sm:text-base hover:bg-white transition-all border-2 border-black shadow-[5px_5px_0px_#0a0a0a] hover:translate-x-0.5 hover:translate-y-0.5 inline-block">
+                        CONTACTAR POR WHATSAPP 💬
+                    </a>
+                    <a href="mailto:gotanfestival@gmail.com" class="text-xs uppercase tracking-widest text-zinc-200 hover:text-mustard underline underline-offset-4 py-2">
+                        O enviar un correo electrónico
                     </a>
                 </div>
             </div>
@@ -729,27 +654,21 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-darkBg border-t border-graphite py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div>
-                <div class="font-display text-2xl text-mustard tracking-wider mb-1">GOTÁN 2026</div>
-                <p class="text-xs text-zinc-400">Festival Internacional de Tango de Altura • Mendoza - Santiago de Chile</p>
+    <footer class="bg-darkBg border-t border-graphite py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-zinc-400 font-mono">
+            <div class="flex items-center space-x-3">
+                <span class="text-mustard font-display text-lg tracking-wider">GOTÁN</span>
+                <span class="text-zinc-600">|</span>
+                <span>Festival Internacional de Tango de Altura © 2026</span>
             </div>
-            
-            <div class="flex flex-col sm:flex-row items-center gap-4 text-xs font-mono">
-                <a href="mailto:gotanfestival@gmail.com" class="text-zinc-400 hover:text-mustard transition-colors">
-                    ✉️ gotanfestival@gmail.com
-                </a>
-                <a href="https://www.instagram.com/gotanfestival/" target="_blank" rel="noopener noreferrer" class="text-softPink hover:text-mustard transition-colors">
-                    📸 @gotanfestival
-                </a>
-                <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="text-mustard hover:underline">
-                    🎟️ Venta General EntradaWeb
-                </a>
+            <div class="text-center md:text-left">
+                <span>Mendoza, Argentina & Santiago de Chile 🇨🇱</span>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-zinc-900 text-center text-[10px] text-zinc-600 font-mono">
-            © 2026 GOTÁN Festival. Todos los derechos reservados. Producción Cultural Independiente.
+            <div class="flex space-x-6 uppercase tracking-wider">
+                <a href="https://www.instagram.com/gotanfestival/" target="_blank" rel="noopener noreferrer" class="hover:text-mustard transition-colors">Instagram</a>
+                <a href="https://www.entradaweb.com.ar/eventos?group=417" target="_blank" rel="noopener noreferrer" class="hover:text-mustard transition-colors">EntradaWeb</a>
+                <a href="mailto:gotanfestival@gmail.com" class="hover:text-mustard transition-colors">Contacto</a>
+            </div>
         </div>
     </footer>
 
