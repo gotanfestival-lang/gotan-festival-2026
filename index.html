@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOTÁN | Festival Internacional de Tango de Altura 2026</title>
+    <link rel="icon" id="gotan-favicon" type="image/png" href="logo.png">
     <!-- Chosen Palette: GOTAN Dark Brutalist (Dark #0a0a0a, Card #121212, Mustard #dbd570, Soft Pink #e6a5a7, Wine Red #a63b5b, Graphite #1f1f1f) -->
-    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup destacado con Vara Dorada (Chile) y Tangorra (Buenos Aires) en formato horizontal ancho como headliners principales y 6 agrupaciones en grilla responsiva, Sección de Sedes optimizada con enlaces directos a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes con efecto Grayscale en reposo y enlace oficial a Instagram de Muni Rivadavia, y Sección Banner CTA de Sponsoreo conectada a WhatsApp y correo. -->
-    <!-- Visualization & Content Choices: Diseño Dark Brutalist en HTML semántico con Tailwind CSS. Cero gráficos SVG. Cero Mermaid.js. Manejador JS centralizado de imágenes que garantiza la búsqueda exhaustiva de extensiones y muestra un fallback visual responsivo únicamente en caso de no hallar el archivo físico. -->
+    <!-- Application Structure Plan: Landing page oficial estática y totalmente responsiva para GOTÁN 2026. Incluye Header con navegación sticky y accesos directos, Hero impactante con llamado a la acción, Manifiesto cultural redactado con ortografía mendocina (OLVIDATE sin tilde), Lineup destacado con Vara Dorada (Chile) y Tangorra (Buenos Aires) en formato horizontal ancho como headliners principales y 6 agrupaciones en grilla responsiva, Sección de Sedes optimizada con enlaces directos a mapas de Google y venta individual de tickets en EntradaWeb, Grilla completa de Organizadores, Aliados e Auspiciantes con efecto Grayscale en reposo y enlace oficial a Instagram de Muni Rivadavia, Sección Banner CTA de Sponsoreo conectada a WhatsApp y correo, y soporte nativo de Favicon con fallback dinámico en Canvas. -->
+    <!-- Visualization & Content Choices: Diseño Dark Brutalist en HTML semántico con Tailwind CSS. Cero gráficos SVG. Cero Mermaid.js. Manejador JS centralizado de imágenes que garantiza la búsqueda exhaustiva de extensiones y muestra un fallback visual responsivo únicamente en caso de no hallar el archivo físico. Soporte automático de Favicon con Canvas dinamico. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -114,6 +115,37 @@
                 }
             }
         }
+
+        (function setupFavicon() {
+            window.addEventListener('DOMContentLoaded', function() {
+                var favicon = document.getElementById('gotan-favicon');
+                if (!favicon) {
+                    favicon = document.createElement('link');
+                    favicon.id = 'gotan-favicon';
+                    favicon.rel = 'icon';
+                    document.head.appendChild(favicon);
+                }
+                var testImg = new Image();
+                testImg.onload = function() {
+                    favicon.href = 'logo.png';
+                };
+                testImg.onerror = function() {
+                    var canvas = document.createElement('canvas');
+                    canvas.width = 64;
+                    canvas.height = 64;
+                    var ctx = canvas.getContext('2d');
+                    ctx.fillStyle = '#0a0a0a';
+                    ctx.fillRect(0, 0, 64, 64);
+                    ctx.fillStyle = '#dbd570';
+                    ctx.font = '900 44px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText('G', 32, 34);
+                    favicon.href = canvas.toDataURL('image/png');
+                };
+                testImg.src = 'logo.png';
+            });
+        })();
     </script>
 </head>
 <body class="grunge-concrete min-h-screen flex flex-col justify-between selection:bg-mustard selection:text-black">
